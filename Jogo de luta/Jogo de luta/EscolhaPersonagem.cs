@@ -16,5 +16,10 @@ namespace Jogo_de_luta
         {
             InitializeComponent();
         }
+
+        private void Player1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
