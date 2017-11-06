@@ -21,5 +21,8 @@ namespace Jogo_de_luta
         {
 
         }
+        public Batalha(string personagem1, string arma1, string personagem2, string arma2) {
+
+        }
     }
 }

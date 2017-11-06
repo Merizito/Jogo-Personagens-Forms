@@ -16,12 +16,9 @@ namespace Jogo_de_luta
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Regras());
-
-            Dragao drag = new Dragao();
-            drag.SalvarNome();
-
+            //Application.Run(new Regras());
             Application.Run(new EscolhaPersonagem());
+
         }
     }
 }

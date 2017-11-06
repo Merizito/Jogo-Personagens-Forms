@@ -18,19 +18,40 @@ namespace Jogo_de_luta
         public EscolhaPersonagem()
         {
             InitializeComponent();
-            FileStream arq2 = new FileStream("personagens.txt", FileMode.Open);
+            AddPersonagem("personagens");
+            AddPersonagem("armas");
+            
+        }
+        public void AddPersonagem(string x) {
+            if (x.ToUpper() == "PERSONAGENS")
+            {
+                FileStream arq2 = new FileStream(x+".txt", FileMode.Open);
             StreamReader ler = new StreamReader(arq2);
 
-            string[] conteudo;
-            int qntLinhas = File.ReadAllLines("personagens.txt").Length;
+            string[] conteudo = ler.ReadToEnd().Split('\n');
             ler.Close();
+            int qntLinhas = File.ReadAllLines(x+".txt").Length;
+           
+                for (int i = 0; i < qntLinhas; i++)
+                {
+                    comboBox1.Items.Add(conteudo[i]);
+                    comboBox3.Items.Add(conteudo[i]);
+                }
+            } else if (x.ToUpper() == "ARMAS") {
+                FileStream arq2 = new FileStream(x + ".txt", FileMode.Open);
+                StreamReader ler = new StreamReader(arq2);
 
-            conteudo = ler.ReadToEnd().Split('\n');
+                string[] conteudo = ler.ReadToEnd().Split('\n');
+                ler.Close();
+                int qntLinhas = File.ReadAllLines(x + ".txt").Length;
 
-            for (int i = 0; i < qntLinhas; i++)
-            {
-                comboBox1.Items.Add(conteudo[i]);
+                for (int i = 0; i < qntLinhas; i++)
+                {
+                    comboBox2.Items.Add(conteudo[i]);
+                    comboBox4.Items.Add(conteudo[i]);
+                }
             }
+
         }
 
         private void Player1_Click(object sender, EventArgs e)
@@ -45,6 +66,17 @@ namespace Jogo_de_luta
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Batalha batalha = new Batalha(comboBox1.Text,comboBox2.Text,comboBox3.Text,comboBox4.Text);
             
         }
     }
