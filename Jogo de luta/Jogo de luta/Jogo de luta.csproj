@@ -45,12 +45,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="armas\CospirFogo.cs" />
+    <Compile Include="armas\Desarmado.cs" />
+    <Compile Include="armas\Fuzil.cs" />
+    <Compile Include="armas\IArma_IF.cs" />
+    <Compile Include="armas\Revolver.cs" />
+    <Compile Include="personagem\Dragao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="personagem\General.cs" />
+    <Compile Include="personagem\LutadorSumo.cs" />
+    <Compile Include="personagem\Personagens.cs" />
+    <Compile Include="personagem\Soldado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
