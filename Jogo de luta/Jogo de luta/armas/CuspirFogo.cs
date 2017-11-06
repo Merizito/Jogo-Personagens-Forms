@@ -10,18 +10,18 @@ namespace Jogo_de_luta.armas
      class CuspirFogo : IArma_IF
     {
         public CuspirFogo() { }
-         public void usarArma()
-        {
-            Console.WriteLine("Whaarrrrr! Fogo!!");
-        }
+        public void usarArma()
+       {
+           Console.WriteLine("Whaarrrrr! Fogo!!");
+       }
 
-         public void SalvarNome()
-        {
-            FileStream arq = new FileStream("armas.txt", FileMode.Append);
-            StreamWriter esc = new StreamWriter(arq);
-
-
-        }
+        public void SalvarNome()
+       {
+           FileStream arq = new FileStream("armas.txt", FileMode.Append);
+           StreamWriter esc = new StreamWriter(arq);
+        
+        
+       }
 
     }
     
