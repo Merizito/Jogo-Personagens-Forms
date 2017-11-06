@@ -157,6 +157,7 @@
             this.Controls.Add(this.Player1);
             this.Name = "EscolhaPersonagem";
             this.Text = "EscolhaPersonagem";
+            this.Load += new System.EventHandler(this.EscolhaPersonagem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

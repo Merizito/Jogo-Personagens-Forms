@@ -16,5 +16,10 @@ namespace Jogo_de_luta
         {
             InitializeComponent();
         }
+
+        private void Batalha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

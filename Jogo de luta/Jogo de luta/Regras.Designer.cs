@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(884, 291);
             this.Name = "Regras";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Regras_Load);
             this.ResumeLayout(false);
 
         }

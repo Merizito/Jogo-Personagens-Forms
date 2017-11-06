@@ -21,5 +21,10 @@ namespace Jogo_de_luta
         {
 
         }
+
+        private void Regras_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

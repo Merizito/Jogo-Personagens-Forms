@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(884, 291);
             this.Name = "Batalha";
             this.Text = "Baatalha";
+            this.Load += new System.EventHandler(this.Batalha_Load);
             this.ResumeLayout(false);
 
         }
