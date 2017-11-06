@@ -50,12 +50,24 @@
     <Compile Include="armas\Fuzil.cs" />
     <Compile Include="armas\IArma_IF.cs" />
     <Compile Include="armas\Revolver.cs" />
-    <Compile Include="personagem\Dragao.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Batalha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Batalha.Designer.cs">
+      <DependentUpon>Batalha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EscolhaPersonagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EscolhaPersonagem.Designer.cs">
+      <DependentUpon>EscolhaPersonagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="personagem\Dragao.cs" />
+    <Compile Include="Regras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Regras.Designer.cs">
+      <DependentUpon>Regras.cs</DependentUpon>
     </Compile>
     <Compile Include="personagem\General.cs" />
     <Compile Include="personagem\LutadorSumo.cs" />

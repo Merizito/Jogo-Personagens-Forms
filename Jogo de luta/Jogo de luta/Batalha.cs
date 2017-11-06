@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Jogo_de_luta
 {
-    public partial class Form1 : Form
+    public partial class Batalha : Form
     {
-        public Form1()
+        public Batalha()
         {
             InitializeComponent();
         }
