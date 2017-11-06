@@ -9,6 +9,7 @@ using Jogo_de_luta.armas;
 using Jogo_de_luta.personagem;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Jogo_de_luta
 {
@@ -31,7 +32,8 @@ namespace Jogo_de_luta
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            FileStream arq2 = new FileStream("personagens.txt", FileMode.Open);
+            StreamReader ler = new StreamReader(arq2);
         }
     }
 }
