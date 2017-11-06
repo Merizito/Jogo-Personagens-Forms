@@ -16,7 +16,7 @@ namespace Jogo_de_luta
         }
         public Dragao()
         {
-            setArma(new CospirFogo());
+            setArma(new CuspirFogo());
 
         }
     }
