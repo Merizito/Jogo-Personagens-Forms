@@ -18,6 +18,19 @@ namespace Jogo_de_luta
         public EscolhaPersonagem()
         {
             InitializeComponent();
+            FileStream arq2 = new FileStream("personagens.txt", FileMode.Open);
+            StreamReader ler = new StreamReader(arq2);
+
+            string[] conteudo;
+            int qntLinhas = File.ReadAllLines("personagens.txt").Length;
+            ler.Close();
+
+            conteudo = ler.ReadToEnd().Split('\n');
+
+            for (int i = 0; i < qntLinhas; i++)
+            {
+                comboBox1.Items.Add(conteudo[i]);
+            }
         }
 
         private void Player1_Click(object sender, EventArgs e)
@@ -32,8 +45,7 @@ namespace Jogo_de_luta
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FileStream arq2 = new FileStream("personagens.txt", FileMode.Open);
-            StreamReader ler = new StreamReader(arq2);
+            
         }
     }
 }
