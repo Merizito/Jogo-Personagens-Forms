@@ -17,6 +17,7 @@ namespace Jogo_de_luta.personagem
         public General()
         {
             setArma(new Fuzil());
+            setNome("General");
         }
         /*public void SalvarNome()
         {

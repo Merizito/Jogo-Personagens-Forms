@@ -17,7 +17,7 @@ namespace Jogo_de_luta.personagem
         public LutadorSumo()
         {
             setArma(new Desarmado());
-
+            setNome("Lutador de Sumo");
         }
         /*public void SalvarNome()
         {

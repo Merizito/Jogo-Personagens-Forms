@@ -70,6 +70,10 @@ namespace Jogo_de_luta
                 arq = new FileStream("armas.txt", FileMode.Append);
                 arq.Close();
             }
+            else if ()
+            {
+
+            }
             
         }
 

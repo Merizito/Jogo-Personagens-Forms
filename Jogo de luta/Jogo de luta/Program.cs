@@ -18,9 +18,13 @@ namespace Jogo_de_luta
             Application.EnableVisualStyles();
             Dragao drag = new Dragao();
             Soldado soldado = new Soldado();
+            LutadorSumo lutador = new LutadorSumo();
+            General general = new General();
 
             Personagens.SalvarNome(drag.getNome());
             Personagens.SalvarNome(soldado.getNome());
+            Personagens.SalvarNome(lutador.getNome());
+            Personagens.SalvarNome(general.getNome());
             
 
 
