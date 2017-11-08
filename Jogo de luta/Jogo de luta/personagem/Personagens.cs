@@ -50,9 +50,9 @@ namespace Jogo_de_luta
             catch (FileNotFoundException erro)
             {
                 string msg = erro.FileName;
-                msg = msg.Remove(0, 120);
-                System.Windows.Forms.MessageBox.Show("ARQUIVO NAO ENCONTRADO\n\n..." + msg);
-                System.Windows.Forms.MessageBox.Show("Gerando arquivo...o");
+                msg = msg.Remove(0, msg.LastIndexOf("bin")-1);
+                System.Windows.Forms.MessageBox.Show("ARQUIVO NAO ENCONTRADO!\n\n..." + msg);
+                System.Windows.Forms.MessageBox.Show("Gerando arquivo...");
                 arq = new FileStream("personagens.txt", FileMode.Create);
                 arq.Close();
             }
