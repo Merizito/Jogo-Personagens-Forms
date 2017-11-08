@@ -9,6 +9,7 @@ using Jogo_de_luta.armas;
 using Jogo_de_luta.personagem;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using System.IO;
 
 namespace Jogo_de_luta
@@ -22,36 +23,54 @@ namespace Jogo_de_luta
             AddPersonagem("armas");
             
         }
-        public void AddPersonagem(string x) {
-            if (x.ToUpper() == "PERSONAGENS")
-            {
-                FileStream arq2 = new FileStream(x+".txt", FileMode.Open);
-            StreamReader ler = new StreamReader(arq2);
-
-            string[] conteudo = ler.ReadToEnd().Split('\n');
-            ler.Close();
-            int qntLinhas = File.ReadAllLines(x+".txt").Length;
-           
-                for (int i = 0; i < qntLinhas; i++)
+        public void AddPersonagem(string x)
+        {
+            FileStream arq;
+            try
+            { 
+                if (x.ToUpper() == "PERSONAGENS")
                 {
-                    comboBox1.Items.Add(conteudo[i]);
-                    comboBox3.Items.Add(conteudo[i]);
+                    FileStream arq2 = new FileStream(x + ".txt", FileMode.Open);
+                    StreamReader ler = new StreamReader(arq2);
+
+                    string[] conteudo = ler.ReadToEnd().Split('\n');
+                    ler.Close();
+                    int qntLinhas = File.ReadAllLines(x + ".txt").Length;
+
+                    for (int i = 0; i < qntLinhas; i++)
+                    {
+                        comboBox1.Items.Add(conteudo[i]);
+                        comboBox3.Items.Add(conteudo[i]);
+                    }
                 }
-            } else if (x.ToUpper() == "ARMAS") {
-                FileStream arq2 = new FileStream(x + ".txt", FileMode.Open);
-                StreamReader ler = new StreamReader(arq2);
-
-                string[] conteudo = ler.ReadToEnd().Split('\n');
-                ler.Close();
-                int qntLinhas = File.ReadAllLines(x + ".txt").Length;
-
-                for (int i = 0; i < qntLinhas; i++)
+            
+            
+                else if (x.ToUpper() == "ARMAS")
                 {
-                    comboBox2.Items.Add(conteudo[i]);
-                    comboBox4.Items.Add(conteudo[i]);
+                    FileStream arq2 = new FileStream(x + ".txt", FileMode.Open);
+                    StreamReader ler = new StreamReader(arq2);
+
+                    string[] conteudo = ler.ReadToEnd().Split('\n');
+                    ler.Close();
+                    int qntLinhas = File.ReadAllLines(x + ".txt").Length;
+
+                    for (int i = 0; i < qntLinhas; i++)
+                    {
+                        comboBox2.Items.Add(conteudo[i]);
+                        comboBox4.Items.Add(conteudo[i]);
+                    }
                 }
             }
-
+            catch (FileNotFoundException erro)
+            {
+                string msg = erro.FileName;
+                msg = msg.Remove(0, 120);
+                System.Windows.Forms.MessageBox.Show("ARQUIVO NAO ENCONTRADO\n\n..." + msg);
+                System.Windows.Forms.MessageBox.Show("Gerando arquivo...");
+                arq = new FileStream("armas.txt", FileMode.Append);
+                arq.Close();
+            }
+            
         }
 
         private void Player1_Click(object sender, EventArgs e)

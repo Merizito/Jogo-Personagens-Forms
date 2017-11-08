@@ -17,13 +17,14 @@ namespace Jogo_de_luta.personagem
         public LutadorSumo()
         {
             setArma(new Desarmado());
+
         }
-        public void SalvarNome()
+        /*public void SalvarNome()
         {
             FileStream arq2 = new FileStream("personagens.txt", FileMode.Append);
             StreamWriter esc = new StreamWriter(arq2);
 
 
-        }
+        }*/
     }
 }

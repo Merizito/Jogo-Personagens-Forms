@@ -16,14 +16,15 @@ namespace Jogo_de_luta.personagem
         }
         public Soldado()
         {
+            setNome("Soldado");
             setArma(new Revolver());
         }
-        public void SalvarNome()
+        /*public void SalvarNome()
         {
             FileStream arq2 = new FileStream("personagens.txt", FileMode.Append);
             StreamWriter esc = new StreamWriter(arq2);
 
-
-        }
+        }*/
+     
     }
 }
