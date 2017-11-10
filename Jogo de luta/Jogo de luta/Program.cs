@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Jogo_de_luta.personagem;
+using Jogo_de_luta.armas;
 using System.Windows.Forms;
 
 namespace Jogo_de_luta
@@ -16,16 +17,26 @@ namespace Jogo_de_luta
         static void Main()
         {
             Application.EnableVisualStyles();
+            ///personagens
             Dragao drag = new Dragao();
             Soldado soldado = new Soldado();
             LutadorSumo lutador = new LutadorSumo();
             General general = new General();
+            ///armas
+            Fuzil fuzil = new Fuzil();
+            CuspirFogo cuspirfogo = new CuspirFogo();
+            Desarmado desarmado = new Desarmado();
+            Revolver revolver = new Revolver();
+
 
             Personagens.SalvarNome(drag.getNome());
             Personagens.SalvarNome(soldado.getNome());
             Personagens.SalvarNome(lutador.getNome());
             Personagens.SalvarNome(general.getNome());
-            
+            Armas.SalvarNome(fuzil.getNome());
+            Armas.SalvarNome(cuspirfogo.getNome());
+            Armas.SalvarNome(desarmado.getNome());
+            Armas.SalvarNome(revolver.getNome());
 
 
             Application.SetCompatibleTextRenderingDefault(false);

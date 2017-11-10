@@ -9,7 +9,7 @@ namespace Jogo_de_luta.armas
     interface IArma_IF
     {
         void usarArma();
-        void SalvarNome();
+        //void SalvarNome();
 
     }
 }

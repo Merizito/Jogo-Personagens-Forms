@@ -7,19 +7,19 @@ using System.IO;
 
 namespace Jogo_de_luta.armas
 {
-    class Revolver : IArma_IF
+    class Revolver : Armas, IArma_IF
     {
-        public Revolver() { }
+        public Revolver() { setNome("Revolver"); }
         public void usarArma()
         {
             Console.WriteLine("Tiro de revolver!!\nPah!");
         }
-        public void SalvarNome()
-        {
-            FileStream arq = new FileStream("armas.txt", FileMode.Append);
-            StreamWriter esc = new StreamWriter(arq);
+    //    public void SalvarNome()
+ //       {
+  //          FileStream arq = new FileStream("armas.txt", FileMode.Append);
+  //          StreamWriter esc = new StreamWriter(arq);
 
 
-        }
+ //       }
     }
 }

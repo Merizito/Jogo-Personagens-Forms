@@ -7,19 +7,22 @@ using System.IO;
 
 namespace Jogo_de_luta.armas
 {
-    class Fuzil : IArma_IF
+    class Fuzil : Armas, IArma_IF
     {
-        public Fuzil() { }
+        public Fuzil() {
+            setNome("Fuzil");
+        }
         public void usarArma()
         {
             Console.WriteLine("Tiros de Fuzil!!\nTra tra tra tra");
-        }
-        public void SalvarNome()
-        {
-            FileStream arq = new FileStream("armas.txt", FileMode.Append);
-            StreamWriter esc = new StreamWriter(arq);
-
 
         }
+      //  public void SalvarNome()
+  //      {
+  //          FileStream arq = new FileStream("armas.txt", FileMode.Append);
+  //          StreamWriter esc = new StreamWriter(arq);
+//
+
+   //     }
     }
 }

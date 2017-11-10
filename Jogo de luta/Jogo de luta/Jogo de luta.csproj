@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="armas\Armas.cs" />
     <Compile Include="armas\CuspirFogo.cs" />
     <Compile Include="armas\Desarmado.cs" />
     <Compile Include="armas\Fuzil.cs" />

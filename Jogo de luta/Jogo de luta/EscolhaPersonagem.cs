@@ -70,10 +70,10 @@ namespace Jogo_de_luta
                 arq = new FileStream("armas.txt", FileMode.Append);
                 arq.Close();
             }
-            else if ()
-            {
+            ///else if ()
+           /// {
 
-            }
+///            }
             
         }
 
@@ -99,8 +99,13 @@ namespace Jogo_de_luta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Batalha batalha = new Batalha(comboBox1.Text,comboBox2.Text,comboBox3.Text,comboBox4.Text);
-            
+            try {
+                Batalha batalha = new Batalha(comboBox1.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text);
+            }
+            catch (NullReferenceException erro) {
+
+                MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n"+erro.Message);
+            }
         }
     }
 }

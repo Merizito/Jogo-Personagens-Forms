@@ -7,15 +7,18 @@ using System.Threading.Tasks;
 
 namespace Jogo_de_luta.armas
 {
-     class CuspirFogo : IArma_IF
+     class CuspirFogo : Armas, IArma_IF
     {
-        public CuspirFogo() { }
+        public CuspirFogo()
+        {
+            this.setNome("Cuspir Fogo");
+        }
         public void usarArma()
        {
            Console.WriteLine("Whaarrrrr! Fogo!!");
        }
 
-        public void SalvarNome()
+      /*  public void SalvarNome()
        {
            FileStream arq = new FileStream("armas.txt", FileMode.Append);
            StreamWriter esc = new StreamWriter(arq);
@@ -46,7 +49,7 @@ namespace Jogo_de_luta.armas
 
             }
         }
-
+        */
     }
     
 }
