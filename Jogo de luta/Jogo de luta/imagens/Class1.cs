@@ -8,5 +8,6 @@ namespace Jogo_de_luta.imagens
 {
     class Class1
     {
+
     }
 }
