@@ -64,6 +64,7 @@
     <Compile Include="EscolhaPersonagem.Designer.cs">
       <DependentUpon>EscolhaPersonagem.cs</DependentUpon>
     </Compile>
+    <Compile Include="imagens\Class1.cs" />
     <Compile Include="personagem\Dragao.cs" />
     <Compile Include="Regras.cs">
       <SubType>Form</SubType>
@@ -109,8 +110,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="imagens\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
