@@ -23,6 +23,17 @@ namespace Jogo_de_luta
             AddPersonagem("armas");
             
         }
+        public EscolhaPersonagem(string p1, string p2) {
+
+            InitializeComponent();
+            AddPersonagem("personagens");
+            AddPersonagem("armas");
+            Player1.Text = p1;
+            label2.Text = p2;
+
+
+        }
+
         public void AddPersonagem(string x)
         {
             FileStream arq;

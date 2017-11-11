@@ -27,18 +27,13 @@ namespace Jogo_de_luta
             CuspirFogo cuspirfogo = new CuspirFogo();
             Desarmado desarmado = new Desarmado();
             Revolver revolver = new Revolver();
-
-
-
-
-
-
-
-
-
+            ///Escolher Personagens
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Regras());
-            Application.Run(new EscolhaPersonagem());
+            Application.Run(new Regras());
+           // Application.Run(new EscolhaPersonagem());
+            
+
+
 
         }
     }

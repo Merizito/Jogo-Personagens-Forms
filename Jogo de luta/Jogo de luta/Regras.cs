@@ -15,6 +15,9 @@ namespace Jogo_de_luta
         public Regras()
         {
             InitializeComponent();
+            textBox1.Text = "//ALGUMA INFORMAÇÃO SOBRE OS DESENVOLVEDORES";
+            textBox2.Text = "Player1";
+            textBox3.Text = "Player2";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -23,6 +26,21 @@ namespace Jogo_de_luta
         }
 
         private void Regras_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EscolhaPersonagem esc =  new EscolhaPersonagem(textBox2.Text, textBox3.Text);
+            esc.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
