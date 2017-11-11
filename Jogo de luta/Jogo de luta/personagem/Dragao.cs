@@ -14,6 +14,7 @@ namespace Jogo_de_luta
         public Dragao()
         {
             setNome("Dragao");
+            setArma(new CuspirFogo());
         }
         public override void Desenhar()
         {
@@ -21,12 +22,13 @@ namespace Jogo_de_luta
         }
         public Dragao(string nome)
         {
+            setNome(nome);
             setArma(new CuspirFogo());
 
         }
-        public void SalvarNome()
+        /* public void SalvarNome()
         {
-            /*string leitura = "";
+           string leitura = "";
             try
             {
                 FileStream rea = new FileStream("personagens.txt", FileMode.Open);
@@ -51,10 +53,9 @@ namespace Jogo_de_luta
                     esc.Close();
 
             }*/
-            
 
-        
 
-        }
+    
+
     }
 }

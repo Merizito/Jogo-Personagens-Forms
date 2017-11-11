@@ -10,6 +10,7 @@ namespace Jogo_de_luta.personagem
 {
     class LutadorSumo : Personagens
     {
+
         public override void Desenhar()
         {
             Console.WriteLine("(>.<)\nSou um Lutador de Sumo!");

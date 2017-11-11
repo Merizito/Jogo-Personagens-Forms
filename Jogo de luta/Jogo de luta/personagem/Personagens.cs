@@ -23,6 +23,7 @@ namespace Jogo_de_luta
 
         public void setNome(string nome) {
             this.nome = nome;
+            SalvarPersonagem(nome);
         }
         public string getNome()
         {

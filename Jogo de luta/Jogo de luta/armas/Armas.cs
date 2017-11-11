@@ -50,6 +50,7 @@ namespace Jogo_de_luta.armas
         }
         public void setNome(string nome) {
             this.Nome = nome;
+            SalvarArma(nome);
         }
     }
 }
