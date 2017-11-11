@@ -111,7 +111,9 @@ namespace Jogo_de_luta
         private void button1_Click(object sender, EventArgs e)
         {
             try {
+                this.Close();
                 Batalha batalha = new Batalha(comboBox1.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text);
+                batalha.Show();
             }
             catch (NullReferenceException erro) {
 

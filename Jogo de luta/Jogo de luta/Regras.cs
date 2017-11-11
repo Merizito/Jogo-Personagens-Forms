@@ -36,8 +36,10 @@ namespace Jogo_de_luta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EscolhaPersonagem esc =  new EscolhaPersonagem(textBox2.Text, textBox3.Text);
-            esc.Show();
+            Regras regras = new Regras();
+            regras.Hide();
+            EscolhaPersonagem escolha = new EscolhaPersonagem(textBox2.Text, textBox3.Text);
+            escolha.Show();    
         }
 
         private void label2_Click(object sender, EventArgs e)
