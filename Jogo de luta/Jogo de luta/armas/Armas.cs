@@ -10,7 +10,7 @@ namespace Jogo_de_luta.armas
     class Armas
     {
         private string Nome;
-        static public void SalvarNome(string nome1)
+        static public void SalvarArma(string nome1)
         {
             FileStream arq;
             StreamReader ler;

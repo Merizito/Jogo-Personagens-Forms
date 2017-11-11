@@ -32,7 +32,7 @@ namespace Jogo_de_luta
         { 
             this.arma = _arma;
         }
-        static public void SalvarNome(string nome1)
+        static public void SalvarPersonagem(string nome1)
         {
             FileStream arq;
             StreamReader ler;

@@ -29,14 +29,14 @@ namespace Jogo_de_luta
             Revolver revolver = new Revolver();
 
 
-            Personagens.SalvarNome(drag.getNome());
-            Personagens.SalvarNome(soldado.getNome());
-            Personagens.SalvarNome(lutador.getNome());
-            Personagens.SalvarNome(general.getNome());
-            Armas.SalvarNome(fuzil.getNome());
-            Armas.SalvarNome(cuspirfogo.getNome());
-            Armas.SalvarNome(desarmado.getNome());
-            Armas.SalvarNome(revolver.getNome());
+            Personagens.SalvarPersonagem(drag.getNome());
+            Personagens.SalvarPersonagem(soldado.getNome());
+            Personagens.SalvarPersonagem(lutador.getNome());
+            Personagens.SalvarPersonagem(general.getNome());
+            Armas.SalvarArma(fuzil.getNome());
+            Armas.SalvarArma(cuspirfogo.getNome());
+            Armas.SalvarArma(desarmado.getNome());
+            Armas.SalvarArma(revolver.getNome());
 
 
             Application.SetCompatibleTextRenderingDefault(false);
