@@ -10,6 +10,8 @@ namespace Jogo_de_luta
 {
     static class Program
     {
+        static string a;
+        static string b;
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
@@ -28,13 +30,20 @@ namespace Jogo_de_luta
             Desarmado desarmado = new Desarmado();
             Revolver revolver = new Revolver();
             ///Escolher Personagens
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Regras());
-           // Application.Run(new EscolhaPersonagem());
             
 
-
-
+            Application.SetCompatibleTextRenderingDefault(false);
+            Regras regra = new Regras();
+            regra.Receber(regra);
+            Application.Run(regra);
+            Application.Run(new EscolhaPersonagem(a,b));
         }
+        public static void variaveisPersonagens(string x,string y) {
+             a=x;
+            b=y;
+        }
+
+
+
     }
 }

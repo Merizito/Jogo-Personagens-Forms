@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,7 @@ namespace Jogo_de_luta
 {
     public partial class Regras : Form
     {
+        Regras x;
         public Regras()
         {
             InitializeComponent();
@@ -19,32 +21,41 @@ namespace Jogo_de_luta
             textBox2.Text = "Player1";
             textBox3.Text = "Player2";
         }
+        public void Receber(Regras y) {
+            x = y;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void Regras_Load(object sender, EventArgs e)
         {
-
+            
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Regras regras = new Regras();
-            regras.Hide();
-            EscolhaPersonagem escolha = new EscolhaPersonagem(textBox2.Text, textBox3.Text);
-            escolha.Show();    
+            Program.variaveisPersonagens(textBox2.Text, textBox3.Text);
+            x.Close();
+
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
