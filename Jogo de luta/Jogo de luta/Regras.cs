@@ -13,7 +13,7 @@ namespace Jogo_de_luta
 {
     public partial class Regras : Form
     {
-        Regras x;
+        Regras RegraAtual;
         public Regras()
         {
             InitializeComponent();
@@ -21,8 +21,8 @@ namespace Jogo_de_luta
             textBox2.Text = "Player1";
             textBox3.Text = "Player2";
         }
-        public void Receber(Regras y) {
-            x = y;
+        public void Receber(Regras ObjetoRegra) {
+            RegraAtual = ObjetoRegra;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace Jogo_de_luta
         private void button1_Click(object sender, EventArgs e)
         {
             Program.variaveisPersonagens(textBox2.Text, textBox3.Text);
-            x.Close();
+            RegraAtual.Close();
 
         }
 

@@ -10,8 +10,8 @@ namespace Jogo_de_luta
 {
     static class Program
     {
-        static string a;
-        static string b;
+        static string player1;
+        static string player2;
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
@@ -36,13 +36,13 @@ namespace Jogo_de_luta
             Regras regra = new Regras();
             regra.Receber(regra);
             Application.Run(regra);
-            Application.Run(new EscolhaPersonagem(a,b));
+            Application.Run(new EscolhaPersonagem(player1,player2));
 
 
         }
-        public static void variaveisPersonagens(string x,string y) {
-             a=x;
-            b=y;
+        public static void variaveisPersonagens(string textbox2,string textbox3) {
+            player1=textbox2;
+            player2=textbox3;
         }
 
 
