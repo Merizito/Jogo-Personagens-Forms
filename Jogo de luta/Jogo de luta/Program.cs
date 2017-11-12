@@ -37,6 +37,8 @@ namespace Jogo_de_luta
             regra.Receber(regra);
             Application.Run(regra);
             Application.Run(new EscolhaPersonagem(a,b));
+
+
         }
         public static void variaveisPersonagens(string x,string y) {
              a=x;
