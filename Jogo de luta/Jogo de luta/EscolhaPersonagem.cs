@@ -117,10 +117,16 @@ namespace Jogo_de_luta
             }
             catch (NullReferenceException erro) {
 
-                MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n"+erro.Message);
+                MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n" + erro.Message);
             }
             // batalha.Show();
            // Application.Run(batalha);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
+                     
         }
     }
 }

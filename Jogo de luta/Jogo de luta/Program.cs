@@ -39,8 +39,8 @@ namespace Jogo_de_luta
             Application.SetCompatibleTextRenderingDefault(false);
             Regras regra = new Regras();
             regra.Receber(regra);
-         //   Application.Run(regra);
-           // Application.Run(new EscolhaPersonagem(player1,player2));
+            Application.Run(regra);
+            Application.Run(new EscolhaPersonagem(player1,player2));
             Application.Run(new Batalha(personagem1, arma1, personagem2, arma2));
 
         }

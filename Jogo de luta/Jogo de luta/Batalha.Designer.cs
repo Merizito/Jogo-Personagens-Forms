@@ -54,6 +54,8 @@
             this.textHP2 = new System.Windows.Forms.TextBox();
             this.textATK2 = new System.Windows.Forms.TextBox();
             this.textDEF2 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -172,6 +174,7 @@
             this.HP1.Name = "HP1";
             this.HP1.Size = new System.Drawing.Size(100, 23);
             this.HP1.TabIndex = 18;
+            this.HP1.Click += new System.EventHandler(this.HP1_Click);
             // 
             // ATK1
             // 
@@ -231,6 +234,7 @@
             this.textHP1.ReadOnly = true;
             this.textHP1.Size = new System.Drawing.Size(41, 20);
             this.textHP1.TabIndex = 26;
+            this.textHP1.TextChanged += new System.EventHandler(this.textHP1_TextChanged);
             // 
             // textATK1
             // 
@@ -272,11 +276,32 @@
             this.textDEF2.Size = new System.Drawing.Size(41, 20);
             this.textDEF2.TabIndex = 29;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(487, 529);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(90, 30);
+            this.button5.TabIndex = 32;
+            this.button5.Text = "SAIR";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(306, 529);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(90, 30);
+            this.button6.TabIndex = 33;
+            this.button6.Text = "Recomeçar";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // Batalha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 631);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.textHP2);
             this.Controls.Add(this.textATK2);
             this.Controls.Add(this.textDEF2);
@@ -341,5 +366,7 @@
         private System.Windows.Forms.TextBox textHP2;
         private System.Windows.Forms.TextBox textATK2;
         private System.Windows.Forms.TextBox textDEF2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

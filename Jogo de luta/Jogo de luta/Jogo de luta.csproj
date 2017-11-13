@@ -110,6 +110,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="imagens\dragao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\general.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\lutadorsumo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\soldado.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
