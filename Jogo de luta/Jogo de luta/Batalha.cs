@@ -16,18 +16,70 @@ namespace Jogo_de_luta
         {
             InitializeComponent();
         }
+
+
         public Batalha(string personagem1, string arma1, string personagem2, string arma2)
         {
-            Regras regras = new Regras();
-            EscolhaPersonagem escolha = new EscolhaPersonagem();
             InitializeComponent();
 
-            regras.Close();
-            escolha.Close();
-        }
+            textBox1.Text = personagem1;
+            textBox2.Text = personagem2;
 
+            HP1.Maximum = 1000;
+            HP1.Minimum = 0;
+            HP1.Increment(1000);
+            textHP1.Text = HP1.Maximum.ToString();
+
+            HP2.Maximum = 1000;
+            HP2.Minimum = 0;
+            textHP2.Text = HP2.Maximum.ToString();
+            HP2.Increment(1000);
+
+            RamdomATKDEF();
+
+        }
+        void RamdomATKDEF() {
+            Random rand = new Random();
+
+            ATK1.Maximum = rand.Next(25, 125);
+            ATK1.Minimum = 0;
+            textATK1.Text = ATK1.Maximum.ToString();    
+            ATK1.Increment(Convert.ToInt32(textATK1.Text));
+
+            ATK2.Maximum = rand.Next(25, 125);
+            ATK2.Minimum = 0;
+            textATK2.Text = ATK2.Maximum.ToString();
+            ATK2.Increment(Convert.ToInt32(textATK2.Text));
+
+            DEF1.Maximum = rand.Next(25, 125);
+            DEF1.Minimum = 0;
+            textDEF1.Text = DEF1.Maximum.ToString();
+            DEF1.Increment(Convert.ToInt32(textDEF1.Text));
+
+            DEF2.Maximum = rand.Next(25, 125);
+            DEF2.Minimum = 0;
+            textDEF2.Text = DEF2.Maximum.ToString();
+            DEF2.Increment(Convert.ToInt32(textDEF2.Text));
+
+        }
         private void Batalha_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            HP1.Value = (HP1.Value - ATK2.Value);
+            textHP1.Text = HP1.Value.ToString();
+            RamdomATKDEF();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HP2.Value = (HP2.Value - ATK1.Value);
+            textHP2.Text = HP2.Value.ToString();
+            RamdomATKDEF();
 
         }
     }

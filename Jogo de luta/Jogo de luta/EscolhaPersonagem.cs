@@ -107,18 +107,20 @@ namespace Jogo_de_luta
         {
 
         }
-
+        Batalha batalha;
         private void button1_Click(object sender, EventArgs e)
         {
             try {
+                Program.variaveisPersonagens(comboBox1.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text);
                 this.Close();
-                Batalha batalha = new Batalha(comboBox1.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text);
-                batalha.Show();
+
             }
             catch (NullReferenceException erro) {
 
                 MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n"+erro.Message);
             }
+            // batalha.Show();
+           // Application.Run(batalha);
         }
     }
 }

@@ -40,19 +40,27 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
-            this.progressBar5 = new System.Windows.Forms.ProgressBar();
-            this.progressBar6 = new System.Windows.Forms.ProgressBar();
+            this.HP1 = new System.Windows.Forms.ProgressBar();
+            this.ATK1 = new System.Windows.Forms.ProgressBar();
+            this.DEF1 = new System.Windows.Forms.ProgressBar();
+            this.DEF2 = new System.Windows.Forms.ProgressBar();
+            this.ATK2 = new System.Windows.Forms.ProgressBar();
+            this.HP2 = new System.Windows.Forms.ProgressBar();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textHP1 = new System.Windows.Forms.TextBox();
+            this.textATK1 = new System.Windows.Forms.TextBox();
+            this.textDEF1 = new System.Windows.Forms.TextBox();
+            this.textHP2 = new System.Windows.Forms.TextBox();
+            this.textATK2 = new System.Windows.Forms.TextBox();
+            this.textDEF2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(108, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(108, 69);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.TabIndex = 0;
@@ -60,7 +68,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(708, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(708, 69);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
             this.pictureBox2.TabIndex = 1;
@@ -78,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(649, 284);
+            this.label2.Location = new System.Drawing.Point(643, 284);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 13);
             this.label2.TabIndex = 9;
@@ -96,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(649, 326);
+            this.label4.Location = new System.Drawing.Point(643, 326);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 11;
@@ -128,6 +136,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "ATACAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -155,60 +164,133 @@
             this.button4.TabIndex = 16;
             this.button4.Text = "ATACAR";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // progressBar1
+            // HP1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(133, 284);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
-            this.progressBar1.TabIndex = 18;
+            this.HP1.Location = new System.Drawing.Point(94, 284);
+            this.HP1.Name = "HP1";
+            this.HP1.Size = new System.Drawing.Size(100, 23);
+            this.HP1.TabIndex = 18;
             // 
-            // progressBar2
+            // ATK1
             // 
-            this.progressBar2.Location = new System.Drawing.Point(133, 326);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(100, 23);
-            this.progressBar2.TabIndex = 19;
+            this.ATK1.Location = new System.Drawing.Point(94, 326);
+            this.ATK1.Name = "ATK1";
+            this.ATK1.Size = new System.Drawing.Size(100, 23);
+            this.ATK1.TabIndex = 19;
             // 
-            // progressBar3
+            // DEF1
             // 
-            this.progressBar3.Location = new System.Drawing.Point(133, 366);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(100, 23);
-            this.progressBar3.TabIndex = 20;
+            this.DEF1.Location = new System.Drawing.Point(94, 366);
+            this.DEF1.Name = "DEF1";
+            this.DEF1.Size = new System.Drawing.Size(100, 23);
+            this.DEF1.TabIndex = 20;
             // 
-            // progressBar4
+            // DEF2
             // 
-            this.progressBar4.Location = new System.Drawing.Point(708, 366);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(100, 23);
-            this.progressBar4.TabIndex = 23;
+            this.DEF2.Location = new System.Drawing.Point(692, 366);
+            this.DEF2.Name = "DEF2";
+            this.DEF2.Size = new System.Drawing.Size(100, 23);
+            this.DEF2.TabIndex = 23;
             // 
-            // progressBar5
+            // ATK2
             // 
-            this.progressBar5.Location = new System.Drawing.Point(708, 326);
-            this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(100, 23);
-            this.progressBar5.TabIndex = 22;
+            this.ATK2.Location = new System.Drawing.Point(692, 326);
+            this.ATK2.Name = "ATK2";
+            this.ATK2.Size = new System.Drawing.Size(100, 23);
+            this.ATK2.TabIndex = 22;
             // 
-            // progressBar6
+            // HP2
             // 
-            this.progressBar6.Location = new System.Drawing.Point(708, 284);
-            this.progressBar6.Name = "progressBar6";
-            this.progressBar6.Size = new System.Drawing.Size(100, 23);
-            this.progressBar6.TabIndex = 21;
+            this.HP2.Location = new System.Drawing.Point(692, 284);
+            this.HP2.Name = "HP2";
+            this.HP2.Size = new System.Drawing.Size(100, 23);
+            this.HP2.TabIndex = 21;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(108, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 24;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(708, 23);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 25;
+            // 
+            // textHP1
+            // 
+            this.textHP1.Location = new System.Drawing.Point(213, 284);
+            this.textHP1.Name = "textHP1";
+            this.textHP1.ReadOnly = true;
+            this.textHP1.Size = new System.Drawing.Size(41, 20);
+            this.textHP1.TabIndex = 26;
+            // 
+            // textATK1
+            // 
+            this.textATK1.Location = new System.Drawing.Point(213, 329);
+            this.textATK1.Name = "textATK1";
+            this.textATK1.ReadOnly = true;
+            this.textATK1.Size = new System.Drawing.Size(41, 20);
+            this.textATK1.TabIndex = 27;
+            // 
+            // textDEF1
+            // 
+            this.textDEF1.Location = new System.Drawing.Point(213, 369);
+            this.textDEF1.Name = "textDEF1";
+            this.textDEF1.ReadOnly = true;
+            this.textDEF1.Size = new System.Drawing.Size(41, 20);
+            this.textDEF1.TabIndex = 28;
+            // 
+            // textHP2
+            // 
+            this.textHP2.Location = new System.Drawing.Point(813, 284);
+            this.textHP2.Name = "textHP2";
+            this.textHP2.ReadOnly = true;
+            this.textHP2.Size = new System.Drawing.Size(41, 20);
+            this.textHP2.TabIndex = 31;
+            // 
+            // textATK2
+            // 
+            this.textATK2.Location = new System.Drawing.Point(813, 326);
+            this.textATK2.Name = "textATK2";
+            this.textATK2.ReadOnly = true;
+            this.textATK2.Size = new System.Drawing.Size(41, 20);
+            this.textATK2.TabIndex = 30;
+            // 
+            // textDEF2
+            // 
+            this.textDEF2.Location = new System.Drawing.Point(813, 366);
+            this.textDEF2.Name = "textDEF2";
+            this.textDEF2.ReadOnly = true;
+            this.textDEF2.Size = new System.Drawing.Size(41, 20);
+            this.textDEF2.TabIndex = 29;
             // 
             // Batalha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 631);
-            this.Controls.Add(this.progressBar4);
-            this.Controls.Add(this.progressBar5);
-            this.Controls.Add(this.progressBar6);
-            this.Controls.Add(this.progressBar3);
-            this.Controls.Add(this.progressBar2);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.textHP2);
+            this.Controls.Add(this.textATK2);
+            this.Controls.Add(this.textDEF2);
+            this.Controls.Add(this.textDEF1);
+            this.Controls.Add(this.textATK1);
+            this.Controls.Add(this.textHP1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DEF2);
+            this.Controls.Add(this.ATK2);
+            this.Controls.Add(this.HP2);
+            this.Controls.Add(this.DEF1);
+            this.Controls.Add(this.ATK1);
+            this.Controls.Add(this.HP1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -245,11 +327,19 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.ProgressBar progressBar4;
-        private System.Windows.Forms.ProgressBar progressBar5;
-        private System.Windows.Forms.ProgressBar progressBar6;
+        private System.Windows.Forms.ProgressBar HP1;
+        private System.Windows.Forms.ProgressBar ATK1;
+        private System.Windows.Forms.ProgressBar DEF1;
+        private System.Windows.Forms.ProgressBar DEF2;
+        private System.Windows.Forms.ProgressBar ATK2;
+        private System.Windows.Forms.ProgressBar HP2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textHP1;
+        private System.Windows.Forms.TextBox textATK1;
+        private System.Windows.Forms.TextBox textDEF1;
+        private System.Windows.Forms.TextBox textHP2;
+        private System.Windows.Forms.TextBox textATK2;
+        private System.Windows.Forms.TextBox textDEF2;
     }
 }

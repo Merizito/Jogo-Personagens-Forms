@@ -22,7 +22,7 @@ namespace Jogo_de_luta
             textBox3.Text = "Player2";
         }
         public void Receber(Regras ObjetoRegra) {
-            RegraAtual = ObjetoRegra;
+        RegraAtual = ObjetoRegra;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace Jogo_de_luta
         {
             Program.variaveisPersonagens(textBox2.Text, textBox3.Text);
             RegraAtual.Close();
-
+            
         }
 
         private void label2_Click(object sender, EventArgs e)

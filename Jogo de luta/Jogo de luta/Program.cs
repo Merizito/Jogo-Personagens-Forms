@@ -12,6 +12,10 @@ namespace Jogo_de_luta
     {
         static string player1;
         static string player2;
+        static string personagem1;
+        static string personagem2;
+        static string arma1;
+        static string arma2;
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
@@ -35,14 +39,22 @@ namespace Jogo_de_luta
             Application.SetCompatibleTextRenderingDefault(false);
             Regras regra = new Regras();
             regra.Receber(regra);
-            Application.Run(regra);
-            Application.Run(new EscolhaPersonagem(player1,player2));
-
+         //   Application.Run(regra);
+           // Application.Run(new EscolhaPersonagem(player1,player2));
+            Application.Run(new Batalha(personagem1, arma1, personagem2, arma2));
 
         }
         public static void variaveisPersonagens(string textbox2,string textbox3) {
             player1=textbox2;
             player2=textbox3;
+        }
+        public static void variaveisPersonagens(string textbox1, string textbox2, string textbox3, string textbox4)
+        {
+            personagem1 = textbox1;
+            arma1 = textbox2;
+            personagem2 = textbox3;
+            arma2 = textbox4;
+
         }
 
 
