@@ -77,7 +77,7 @@ namespace Jogo_de_luta
             {
                 string msg = erro.FileName;
                 msg = msg.Remove(0, msg.LastIndexOf("bin") - 1);
-                System.Windows.Forms.MessageBox.Show("ARQUIVO NAO ENCONTRADO!\n\n..." + msg);
+                System.Windows.Forms.MessageBox.Show("ARQUIVO NAO ENCONTRADO!\n\n..." + msg, "Erro!");
                 System.Windows.Forms.MessageBox.Show("Gerando arquivo...");
                 arq = new FileStream("armas.txt", FileMode.Append);
                 arq.Close();
@@ -147,7 +147,7 @@ namespace Jogo_de_luta
             NullReferenceException erro = new NullReferenceException();          
             if (comboBox1.SelectedIndex == -1 || comboBox2.SelectedIndex == -1 || comboBox3.SelectedIndex == -1 || comboBox4.SelectedIndex == -1)
             {
-                   MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n" + erro.Message);
+                   MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n" + erro.Message,"Aviso!");
             }
             else
             {
@@ -169,30 +169,31 @@ namespace Jogo_de_luta
         }
 
 
-     /*   private void button2_Click(object sender, EventArgs e)
-        {
-            if (comboBox1.Text.ToUpper() == "DRAGAO")
-                pictureBox1.Image = Image.FromFile(comboBox1.Text.ToLower()+".png");
-            else if (comboBox1.Text.ToUpper() == "GENERAL")
-                pictureBox1.Image = Properties.Resources.general;
-            else if (comboBox1.Text.ToUpper() == "SOLDADO")
-                pictureBox1.Image = Properties.Resources.soldado;
-            else if (comboBox1.Text.ToUpper() == "LUTADOR DE SUMO")
-                pictureBox1.Image = Properties.Resources.lutadorsumo;
-            else
-                pictureBox2.Image = Properties.Resources.dragao;
-            if (comboBox1.Text.ToUpper() == "DRAGAO")
-                pictureBox2.Image = Image.FromFile(comboBox1.Text.ToLower() + ".png");
-            else if (comboBox1.Text.ToUpper() == "GENERAL")
-                pictureBox2.Image = Properties.Resources.general;
-            else if (comboBox1.Text.ToUpper() == "SOLDADO")
-                pictureBox2.Image = Properties.Resources.soldado;
-            else if (comboBox1.Text.ToUpper() == "LUTADOR DE SUMO")
-                pictureBox2.Image = Properties.Resources.lutadorsumo;
-            else
-                pictureBox2.Image = Properties.Resources.dragao;
+        /*   private void button2_Click(object sender, EventArgs e)
+           {
+               if (comboBox1.Text.ToUpper() == "DRAGAO")
+                   pictureBox1.Image = Image.FromFile(comboBox1.Text.ToLower()+".png");
+               else if (comboBox1.Text.ToUpper() == "GENERAL")
+                   pictureBox1.Image = Properties.Resources.general;
+               else if (comboBox1.Text.ToUpper() == "SOLDADO")
+                   pictureBox1.Image = Properties.Resources.soldado;
+               else if (comboBox1.Text.ToUpper() == "LUTADOR DE SUMO")
+                   pictureBox1.Image = Properties.Resources.lutadorsumo;
+               else
+                   pictureBox2.Image = Properties.Resources.dragao;
+               if (comboBox1.Text.ToUpper() == "DRAGAO")
+                   pictureBox2.Image = Image.FromFile(comboBox1.Text.ToLower() + ".png");
+               else if (comboBox1.Text.ToUpper() == "GENERAL")
+                   pictureBox2.Image = Properties.Resources.general;
+               else if (comboBox1.Text.ToUpper() == "SOLDADO")
+                   pictureBox2.Image = Properties.Resources.soldado;
+               else if (comboBox1.Text.ToUpper() == "LUTADOR DE SUMO")
+                   pictureBox2.Image = Properties.Resources.lutadorsumo;
+               else
+                   pictureBox2.Image = Properties.Resources.dragao;
 
 
-        }*/
+           }*/
+        
     }
 }

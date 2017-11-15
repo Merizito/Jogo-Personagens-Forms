@@ -334,6 +334,7 @@
             this.Controls.Add(this.ImagemPlayer2);
             this.Controls.Add(this.ImagemPlayer1);
             this.Name = "Batalha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Batalha";
             this.Load += new System.EventHandler(this.Batalha_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).EndInit();

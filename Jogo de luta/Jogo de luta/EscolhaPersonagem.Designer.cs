@@ -187,6 +187,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Player1);
             this.Name = "EscolhaPersonagem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EscolhaPersonagem";
             this.Load += new System.EventHandler(this.EscolhaPersonagem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).EndInit();

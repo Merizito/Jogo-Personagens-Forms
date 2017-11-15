@@ -52,7 +52,7 @@ namespace Jogo_de_luta
             {
                 string msg = erro.FileName;
                 msg = msg.Remove(0, msg.LastIndexOf("bin")-1);
-                System.Windows.Forms.MessageBox.Show("ARQUIVO NAO ENCONTRADO!\n\n..." + msg);
+                System.Windows.Forms.MessageBox.Show("ARQUIVO NAO ENCONTRADO!\n\n..." + msg, "Erro!");
                 System.Windows.Forms.MessageBox.Show("Gerando arquivo...");
                 arq = new FileStream("personagens.txt", FileMode.Create);
                 arq.Close();
