@@ -16,9 +16,57 @@ namespace Jogo_de_luta
         {
             InitializeComponent();
         }
-        public Batalha(string personagem1, string arma1, string personagem2, string arma2)
+        public Batalha(string getNome, string arma1, string getNome2, string arma2)
         {
+            string personagem1 = "";
+            string personagem2 = "";
+
             InitializeComponent();
+
+            if (getNome == "0")                                         //Dragao
+            {
+                ImagemPlayer1.Image = Properties.Resources.dragao;
+                personagem1 = "dragao";
+            }
+            else if (getNome == "1")                                    //Soldado
+            {
+                ImagemPlayer1.Image = Properties.Resources.soldado;
+                personagem1 = "soldado";
+
+            }
+            else if (getNome == "2")                                    //Lutador de Sumo
+            {
+                ImagemPlayer1.Image = Properties.Resources.lutadorsumo;
+                personagem1 = "lutadorsumo";
+
+            }
+            else if (getNome == "3")                                    //General
+            {
+                ImagemPlayer1.Image = Properties.Resources.general;
+                personagem1 = "general";
+
+            }
+
+            if (getNome2 == "0")                                         //Dragao
+            {
+                ImagemPlayer2.Image = Properties.Resources.dragao;
+                personagem2 = "Dragao";
+            }
+            else if (getNome2 == "1")                                        //Soldado
+            {
+                ImagemPlayer2.Image = Properties.Resources.soldado;
+                personagem2 = "soldado";
+            }
+            else if (getNome2 == "2")                                    //Lutador de Sumo
+            {
+                ImagemPlayer2.Image = Properties.Resources.lutadorsumo;
+                personagem2 = "lutadorsumo";
+            }
+            else if (getNome2 == "3")                                    //General
+            {
+                ImagemPlayer2.Image = Properties.Resources.general;
+                personagem2 = "general";
+            }
             button5.Enabled = false;
 
             textBox1.Text = personagem1;

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ImagemPlayer1 = new System.Windows.Forms.PictureBox();
+            this.ImagemPlayer2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,25 +56,27 @@
             this.textDEF2 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer2)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ImagemPlayer1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(108, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ImagemPlayer1.Location = new System.Drawing.Point(42, 49);
+            this.ImagemPlayer1.Name = "ImagemPlayer1";
+            this.ImagemPlayer1.Size = new System.Drawing.Size(235, 205);
+            this.ImagemPlayer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImagemPlayer1.TabIndex = 0;
+            this.ImagemPlayer1.TabStop = false;
             // 
-            // pictureBox2
+            // ImagemPlayer2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(708, 69);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.ImagemPlayer2.Location = new System.Drawing.Point(637, 49);
+            this.ImagemPlayer2.Name = "ImagemPlayer2";
+            this.ImagemPlayer2.Size = new System.Drawing.Size(235, 205);
+            this.ImagemPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImagemPlayer2.TabIndex = 1;
+            this.ImagemPlayer2.TabStop = false;
             // 
             // label1
             // 
@@ -326,13 +328,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ImagemPlayer2);
+            this.Controls.Add(this.ImagemPlayer1);
             this.Name = "Batalha";
             this.Text = "Batalha";
             this.Load += new System.EventHandler(this.Batalha_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,8 +342,8 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox ImagemPlayer1;
+        private System.Windows.Forms.PictureBox ImagemPlayer2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -94,9 +94,6 @@ namespace Jogo_de_luta
 
         }
 
-
-
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string getNome;
@@ -148,7 +145,7 @@ namespace Jogo_de_luta
         private void button1_Click(object sender, EventArgs e)
         {
             try {
-                Program.variaveisPersonagens(comboBox1.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text);
+                Program.variaveisPersonagens(comboBox1.SelectedIndex.ToString(), comboBox2.Text, comboBox3.SelectedIndex.ToString(), comboBox4.Text);
                 Close();
 
             }
@@ -156,8 +153,6 @@ namespace Jogo_de_luta
 
                 MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n" + erro.Message);
             }
-            // batalha.Show();
-           // Application.Run(batalha);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -170,6 +165,7 @@ namespace Jogo_de_luta
         {
 
         }
+
 
      /*   private void button2_Click(object sender, EventArgs e)
         {
