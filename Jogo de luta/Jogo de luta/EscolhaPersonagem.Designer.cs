@@ -39,10 +39,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.ImagemPlayer1 = new System.Windows.Forms.PictureBox();
+            this.ImagemPlayer2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer2)).BeginInit();
             this.SuspendLayout();
             // 
             // Player1
@@ -146,35 +146,35 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // ImagemPlayer1
             // 
-            this.pictureBox1.Image = global::Jogo_de_luta.Properties.Resources.dragao;
-            this.pictureBox1.Location = new System.Drawing.Point(115, 97);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.ImagemPlayer1.Image = global::Jogo_de_luta.Properties.Resources.dragao;
+            this.ImagemPlayer1.Location = new System.Drawing.Point(115, 97);
+            this.ImagemPlayer1.Name = "ImagemPlayer1";
+            this.ImagemPlayer1.Size = new System.Drawing.Size(166, 116);
+            this.ImagemPlayer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImagemPlayer1.TabIndex = 11;
+            this.ImagemPlayer1.TabStop = false;
+            this.ImagemPlayer1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
+            // ImagemPlayer2
             // 
-            this.pictureBox2.Image = global::Jogo_de_luta.Properties.Resources.dragao;
-            this.pictureBox2.Location = new System.Drawing.Point(654, 97);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(166, 116);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.ImagemPlayer2.Image = global::Jogo_de_luta.Properties.Resources.dragao;
+            this.ImagemPlayer2.Location = new System.Drawing.Point(654, 97);
+            this.ImagemPlayer2.Name = "ImagemPlayer2";
+            this.ImagemPlayer2.Size = new System.Drawing.Size(166, 116);
+            this.ImagemPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImagemPlayer2.TabIndex = 12;
+            this.ImagemPlayer2.TabStop = false;
+            this.ImagemPlayer2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // EscolhaPersonagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 291);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ImagemPlayer2);
+            this.Controls.Add(this.ImagemPlayer1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -189,8 +189,8 @@
             this.Name = "EscolhaPersonagem";
             this.Text = "EscolhaPersonagem";
             this.Load += new System.EventHandler(this.EscolhaPersonagem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,7 +209,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox ImagemPlayer1;
+        private System.Windows.Forms.PictureBox ImagemPlayer2;
     }
 }

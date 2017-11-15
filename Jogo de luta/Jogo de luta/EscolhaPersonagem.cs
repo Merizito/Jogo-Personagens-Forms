@@ -30,10 +30,8 @@ namespace Jogo_de_luta
             AddPersonagem("armas");
             Player1.Text = p1;
             label2.Text = p2;
-            comboBox2.Text = "dragao";
-            pictureBox2.Image = Image.FromFile(comboBox2.Text+".png");
-            pictureBox2.ImageLocation = "soldado.png";
-            System.Threading.Thread.Sleep(1000);
+          //  ImagemPlayer1.Image = Properties.Resources.soldado;
+            ImagemPlayer2.ImageLocation = "soldado.png";
 
         }
 
@@ -95,6 +93,10 @@ namespace Jogo_de_luta
         {
 
         }
+
+
+
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
