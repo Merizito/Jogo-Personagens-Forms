@@ -167,33 +167,6 @@ namespace Jogo_de_luta
 
         }
 
-
-        /*   private void button2_Click(object sender, EventArgs e)
-           {
-               if (comboBox1.Text.ToUpper() == "DRAGAO")
-                   pictureBox1.Image = Image.FromFile(comboBox1.Text.ToLower()+".png");
-               else if (comboBox1.Text.ToUpper() == "GENERAL")
-                   pictureBox1.Image = Properties.Resources.general;
-               else if (comboBox1.Text.ToUpper() == "SOLDADO")
-                   pictureBox1.Image = Properties.Resources.soldado;
-               else if (comboBox1.Text.ToUpper() == "LUTADOR DE SUMO")
-                   pictureBox1.Image = Properties.Resources.lutadorsumo;
-               else
-                   pictureBox2.Image = Properties.Resources.dragao;
-               if (comboBox1.Text.ToUpper() == "DRAGAO")
-                   pictureBox2.Image = Image.FromFile(comboBox1.Text.ToLower() + ".png");
-               else if (comboBox1.Text.ToUpper() == "GENERAL")
-                   pictureBox2.Image = Properties.Resources.general;
-               else if (comboBox1.Text.ToUpper() == "SOLDADO")
-                   pictureBox2.Image = Properties.Resources.soldado;
-               else if (comboBox1.Text.ToUpper() == "LUTADOR DE SUMO")
-                   pictureBox2.Image = Properties.Resources.lutadorsumo;
-               else
-                   pictureBox2.Image = Properties.Resources.dragao;
-
-
-           }*/
-
         private void EscolhaPersonagem_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
