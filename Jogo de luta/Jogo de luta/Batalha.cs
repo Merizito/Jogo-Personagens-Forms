@@ -16,12 +16,15 @@ namespace Jogo_de_luta
         {
             InitializeComponent();
         }
-        public Batalha(string getNome, string arma1, string getNome2, string arma2)
+        public Batalha(string getNome, string arma1, string getNome2, string arma2, bool verfica)
         {
             string personagem1 = "";
             string personagem2 = "";
 
             InitializeComponent();
+
+            player2Atk.Enabled = false;
+            player2Def.Enabled = false;
 
             if (getNome == "0")                                         //Dragao
             {
@@ -82,45 +85,53 @@ namespace Jogo_de_luta
             textHP2.Text = HP2.Maximum.ToString();
             HP2.Increment(1000);
 
-            RamdomATKDEF();
-
+            RandomATKDEF();
+            RamdomATKDEF2();
         }
-        void RamdomATKDEF() {
+        void RandomATKDEF()
+        {
             Random rand = new Random();
 
             ATK1.Maximum = rand.Next(25, 125);
             ATK1.Minimum = 0;
-            textATK1.Text = ATK1.Maximum.ToString();    
+            textATK1.Text = ATK1.Maximum.ToString();
             ATK1.Increment(Convert.ToInt32(textATK1.Text));
-
-            ATK2.Maximum = rand.Next(25, 125);
-            ATK2.Minimum = 0;
-            textATK2.Text = ATK2.Maximum.ToString();
-            ATK2.Increment(Convert.ToInt32(textATK2.Text));
 
             DEF1.Maximum = rand.Next(25, 125);
             DEF1.Minimum = 0;
             textDEF1.Text = DEF1.Maximum.ToString();
             DEF1.Increment(Convert.ToInt32(textDEF1.Text));
+        }
 
-            DEF2.Maximum = rand.Next(25, 125);
+        void RamdomATKDEF2() {
+            Random rand2 = new Random();
+
+            ATK2.Maximum = rand2.Next(25, 125);
+            ATK2.Minimum = 0;
+            textATK2.Text = ATK2.Maximum.ToString();
+            ATK2.Increment(Convert.ToInt32(textATK2.Text));
+
+            DEF2.Maximum = rand2.Next(25, 125);
             DEF2.Minimum = 0;
             textDEF2.Text = DEF2.Maximum.ToString();
             DEF2.Increment(Convert.ToInt32(textDEF2.Text));
 
         }
+
         private void Batalha_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void player2Atk_Click(object sender, EventArgs e)
         {
             try
             {
                 HP1.Value = (HP1.Value - ATK2.Value);
                 textHP1.Text = HP1.Value.ToString();
-                RamdomATKDEF();
+                RamdomATKDEF2();
+                player1Atk.Enabled = true;
+                player1Def.Enabled = true;
             }
             catch (ArgumentOutOfRangeException)
             {
@@ -129,22 +140,29 @@ namespace Jogo_de_luta
                     textHP1.Text = "0";
                     HP1.Value = 0;
                     MessageBox.Show("Player 2 ganhou!");
-                    button1.Enabled = false;
-                    button2.Enabled = false;
-                    button4.Enabled = false;
-                    button3.Enabled = false;
+                    player1Atk.Enabled = false;
+                    player1Def.Enabled = false;
+                    player2Atk.Enabled = false;
+                    player2Def.Enabled = false;
                     button5.Enabled = true;
                 }  
             }
+            finally
+            {
+                player2Atk.Enabled = false;
+                player2Def.Enabled = false;
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void player1Atk_Click(object sender, EventArgs e)
         {
             try
             {
                 HP2.Value = (HP2.Value - ATK1.Value);
                 textHP2.Text = HP2.Value.ToString();
-                RamdomATKDEF();
+                RandomATKDEF();
+                player2Atk.Enabled = true;
+                player2Def.Enabled = true;
             }
             catch (ArgumentOutOfRangeException)
             {
@@ -153,12 +171,17 @@ namespace Jogo_de_luta
                     textHP2.Text = "0";
                     HP2.Value = 0;
                     MessageBox.Show("Player 1 ganhou!");
-                    button1.Enabled = false;
-                    button2.Enabled = false;
-                    button4.Enabled = false;
-                    button3.Enabled = false;
+                    player1Atk.Enabled = false;
+                    player1Def.Enabled = false;
+                    player2Atk.Enabled = false;
+                    player2Def.Enabled = false;
                     button5.Enabled = true;
                 }
+            }
+            finally
+            {
+                player1Atk.Enabled = false;
+                player1Def.Enabled = false;
             }
         }
 
@@ -175,6 +198,22 @@ namespace Jogo_de_luta
         private void button5_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void player1Def_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void player2Def_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botaoRecomeçar_Click(object sender, EventArgs e)
+        {
+            Program.verifica = true;
+            Close();
         }
     }
 }

@@ -144,15 +144,17 @@ namespace Jogo_de_luta
  
         private void button1_Click(object sender, EventArgs e)
         {
-            try {
+            NullReferenceException erro = new NullReferenceException();          
+            if (comboBox1.SelectedIndex == -1 || comboBox2.SelectedIndex == -1 || comboBox3.SelectedIndex == -1 || comboBox4.SelectedIndex == -1)
+            {
+                   MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n" + erro.Message);
+            }
+            else
+            {
                 Program.variaveisPersonagens(comboBox1.SelectedIndex.ToString(), comboBox2.Text, comboBox3.SelectedIndex.ToString(), comboBox4.Text);
                 Close();
-
             }
-            catch (NullReferenceException erro) {
 
-                MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n" + erro.Message);
-            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

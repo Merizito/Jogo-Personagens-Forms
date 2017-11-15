@@ -16,6 +16,7 @@ namespace Jogo_de_luta
         static string personagem2;
         static string arma1;
         static string arma2;
+        public  static bool verifica = false;
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
@@ -34,14 +35,24 @@ namespace Jogo_de_luta
             Desarmado desarmado = new Desarmado();
             Revolver revolver = new Revolver();
             ///Escolher Personagens
-            
+
 
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Regras());
-            Application.Run(new EscolhaPersonagem(player1,player2));
-            Application.Run(new Batalha(personagem1, arma1, personagem2, arma2));
-
-        }
+            Application.Run(new EscolhaPersonagem(player1, player2));
+            Application.Run(new Batalha(personagem1, arma1, personagem2, arma2, verifica));
+            do
+            {
+                if (verifica == true)
+                {
+                    verifica = false;
+                    Application.Run(new Regras());
+                    Application.Run(new EscolhaPersonagem(player1, player2));
+                    Application.Run(new Batalha(personagem1, arma1, personagem2, arma2, verifica));
+                }
+            } while (verifica == true);
+            
+        }  
         public static void variaveisPersonagens(string textbox2,string textbox3) {
             player1=textbox2;
             player2=textbox3;
