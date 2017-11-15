@@ -30,7 +30,10 @@ namespace Jogo_de_luta
             AddPersonagem("armas");
             Player1.Text = p1;
             label2.Text = p2;
-
+            comboBox2.Text = "dragao";
+            pictureBox2.Image = Image.FromFile(comboBox2.Text+".png");
+            pictureBox2.ImageLocation = "soldado.png";
+            System.Threading.Thread.Sleep(1000);
 
         }
 
@@ -80,12 +83,7 @@ namespace Jogo_de_luta
                 System.Windows.Forms.MessageBox.Show("Gerando arquivo...");
                 arq = new FileStream("armas.txt", FileMode.Append);
                 arq.Close();
-            }
-            ///else if ()
-           /// {
-
-///            }
-            
+            }   
         }
 
         private void Player1_Click(object sender, EventArgs e)
@@ -97,7 +95,6 @@ namespace Jogo_de_luta
         {
 
         }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -107,12 +104,12 @@ namespace Jogo_de_luta
         {
 
         }
-        Batalha batalha;
+ 
         private void button1_Click(object sender, EventArgs e)
         {
             try {
                 Program.variaveisPersonagens(comboBox1.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text);
-                this.Close();
+                Close();
 
             }
             catch (NullReferenceException erro) {
@@ -128,5 +125,36 @@ namespace Jogo_de_luta
            
                      
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     /*   private void button2_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text.ToUpper() == "DRAGAO")
+                pictureBox1.Image = Image.FromFile(comboBox1.Text.ToLower()+".png");
+            else if (comboBox1.Text.ToUpper() == "GENERAL")
+                pictureBox1.Image = Properties.Resources.general;
+            else if (comboBox1.Text.ToUpper() == "SOLDADO")
+                pictureBox1.Image = Properties.Resources.soldado;
+            else if (comboBox1.Text.ToUpper() == "LUTADOR DE SUMO")
+                pictureBox1.Image = Properties.Resources.lutadorsumo;
+            else
+                pictureBox2.Image = Properties.Resources.dragao;
+            if (comboBox1.Text.ToUpper() == "DRAGAO")
+                pictureBox2.Image = Image.FromFile(comboBox1.Text.ToLower() + ".png");
+            else if (comboBox1.Text.ToUpper() == "GENERAL")
+                pictureBox2.Image = Properties.Resources.general;
+            else if (comboBox1.Text.ToUpper() == "SOLDADO")
+                pictureBox2.Image = Properties.Resources.soldado;
+            else if (comboBox1.Text.ToUpper() == "LUTADOR DE SUMO")
+                pictureBox2.Image = Properties.Resources.lutadorsumo;
+            else
+                pictureBox2.Image = Properties.Resources.dragao;
+
+
+        }*/
     }
 }
