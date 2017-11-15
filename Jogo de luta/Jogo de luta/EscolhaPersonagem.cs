@@ -193,6 +193,12 @@ namespace Jogo_de_luta
 
 
            }*/
-        
+
+        private void EscolhaPersonagem_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
+
+    
 }
