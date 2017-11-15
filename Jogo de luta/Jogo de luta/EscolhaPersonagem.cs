@@ -143,11 +143,10 @@ namespace Jogo_de_luta
         }
  
         private void button1_Click(object sender, EventArgs e)
-        {
-            NullReferenceException erro = new NullReferenceException();          
+        {      
             if (comboBox1.SelectedIndex == -1 || comboBox2.SelectedIndex == -1 || comboBox3.SelectedIndex == -1 || comboBox4.SelectedIndex == -1)
             {
-                   MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n" + erro.Message,"Aviso!");
+                   MessageBox.Show("TODOS OS CAMPOS DEVEM SER PREENCHIDOS!\n\n","Aviso!");
             }
             else
             {
