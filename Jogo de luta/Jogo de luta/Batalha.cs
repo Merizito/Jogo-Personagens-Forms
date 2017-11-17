@@ -12,6 +12,7 @@ namespace Jogo_de_luta
 {
     public partial class Batalha : Form
     {
+        static int Rounds = 1;
         public Batalha()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Jogo_de_luta
             string personagem2 = "";
 
             InitializeComponent();
+            RoundsTextBox.Text = "º"+Rounds+" ROUND";
 
             player2Atk.Enabled = false;
             player2Def.Enabled = false;
@@ -145,6 +147,7 @@ namespace Jogo_de_luta
                     player2Atk.Enabled = false;
                     player2Def.Enabled = false;
                     button5.Enabled = true;
+                    ProximoRound(2);
                 }  
             }
             finally
@@ -153,7 +156,21 @@ namespace Jogo_de_luta
                 player2Def.Enabled = false;
             }
         }
+        public void ProximoRound(int vencedor) {
+            if (Rounds == 1)
+            {
 
+            }
+            else if (Rounds == 2)
+            {
+
+            }
+            else if (Rounds == 3) {
+
+            }
+
+
+        }
         private void player1Atk_Click(object sender, EventArgs e)
         {
             try
@@ -176,6 +193,7 @@ namespace Jogo_de_luta
                     player2Atk.Enabled = false;
                     player2Def.Enabled = false;
                     button5.Enabled = true;
+                    ProximoRound(1);
                 }
             }
             finally

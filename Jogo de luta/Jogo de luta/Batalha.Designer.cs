@@ -56,6 +56,7 @@
             this.textDEF2 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.botaoRecomeçar = new System.Windows.Forms.Button();
+            this.RoundsTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer2)).BeginInit();
             this.SuspendLayout();
@@ -300,11 +301,22 @@
             this.botaoRecomeçar.UseVisualStyleBackColor = true;
             this.botaoRecomeçar.Click += new System.EventHandler(this.botaoRecomeçar_Click);
             // 
+            // RoundsTextBox
+            // 
+            this.RoundsTextBox.Enabled = false;
+            this.RoundsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoundsTextBox.Location = new System.Drawing.Point(399, 12);
+            this.RoundsTextBox.Multiline = true;
+            this.RoundsTextBox.Name = "RoundsTextBox";
+            this.RoundsTextBox.Size = new System.Drawing.Size(106, 31);
+            this.RoundsTextBox.TabIndex = 34;
+            // 
             // Batalha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 631);
+            this.Controls.Add(this.RoundsTextBox);
             this.Controls.Add(this.botaoRecomeçar);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textHP2);
@@ -374,5 +386,6 @@
         private System.Windows.Forms.TextBox textDEF2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button botaoRecomeçar;
+        private System.Windows.Forms.TextBox RoundsTextBox;
     }
 }
