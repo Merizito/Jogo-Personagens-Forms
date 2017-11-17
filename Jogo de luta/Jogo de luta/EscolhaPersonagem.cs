@@ -16,6 +16,7 @@ namespace Jogo_de_luta
 {
     public partial class EscolhaPersonagem : Form
     {
+        static bool closer = false;
         public EscolhaPersonagem()
         {
             InitializeComponent();
@@ -151,6 +152,7 @@ namespace Jogo_de_luta
             else
             {
                 Program.variaveisPersonagens(comboBox1.SelectedIndex.ToString(), comboBox2.Text, comboBox3.SelectedIndex.ToString(), comboBox4.Text);
+                closer = true;
                 Close();
             }
 
@@ -169,7 +171,13 @@ namespace Jogo_de_luta
 
         private void EscolhaPersonagem_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0);
+            if (closer == true)
+            {
+                Hide();
+                closer = false;
+            }
+            else
+                Environment.Exit(0);
         }
     }
 
