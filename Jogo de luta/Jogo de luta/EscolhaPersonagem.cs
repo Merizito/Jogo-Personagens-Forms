@@ -14,7 +14,6 @@ using System.IO;
 
 namespace Jogo_de_luta
 {
-    public delegate void adicionarpersonagem(string personxarma);
     public partial class EscolhaPersonagem : Form
     {
         static bool closer = false;

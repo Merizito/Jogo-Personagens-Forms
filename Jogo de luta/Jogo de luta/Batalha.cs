@@ -104,6 +104,7 @@ namespace Jogo_de_luta
             textDEF1.Text = DEF1.Maximum.ToString();
             DEF1.Increment(Convert.ToInt32(textDEF1.Text));
         }
+
         void RamdomATKDEF2() {
             Random rand2 = new Random();
 
@@ -118,10 +119,12 @@ namespace Jogo_de_luta
             DEF2.Increment(Convert.ToInt32(textDEF2.Text));
 
         }
+
         private void Batalha_Load(object sender, EventArgs e)
         {
 
         }
+
         private void player2Atk_Click(object sender, EventArgs e)
         {
             try
@@ -154,28 +157,16 @@ namespace Jogo_de_luta
             }
         }
         public void ProximoRound(int vencedor) {
-            TrocaDeArma novaarma = new TrocaDeArma();
             if (Rounds == 1)
             {
-                this.Hide();
-                Application.Run(new TrocaDeArma(textBox1.Text));
-                string novaarmaperson1 = novaarma.getValor();
-                Application.Run( new TrocaDeArma(textBox2.Text));
-                string novaarmaperson2 = novaarma.getValor();
-                this.Show();
+
             }
             else if (Rounds == 2)
             {
-                if (vencedor == 1)
-                {
-                    Application.Run(new TrocaDeArma(textBox2.Text));
-                    string novaarmaperson1 = novaarma.getValor();
-                }
-                else
-                {
-                    Application.Run(new TrocaDeArma(textBox1.Text));
-                    string novaarmaperson2 = novaarma.getValor();
-                }
+
+            }
+            else if (Rounds == 3) {
+
             }
 
 
@@ -211,26 +202,32 @@ namespace Jogo_de_luta
                 player1Def.Enabled = false;
             }
         }
+
         private void HP1_Click(object sender, EventArgs e)
         {
 
         }
+
         private void textHP1_TextChanged(object sender, EventArgs e)
         {
 
         }
+
         private void button5_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
+
         private void player1Def_Click(object sender, EventArgs e)
         {
 
         }
+
         private void player2Def_Click(object sender, EventArgs e)
         {
 
         }
+
         private void botaoRecomeçar_Click(object sender, EventArgs e)
         {
             Program.verifica = true;
