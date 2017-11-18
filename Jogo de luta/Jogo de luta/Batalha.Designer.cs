@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ImagemPlayer1 = new System.Windows.Forms.PictureBox();
-            this.ImagemPlayer2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,27 +55,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.botaoRecomeçar = new System.Windows.Forms.Button();
             this.RoundsTextBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).BeginInit();
+            this.ImagemPlayer2 = new System.Windows.Forms.PictureBox();
+            this.ImagemPlayer1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ImagemPlayer1
-            // 
-            this.ImagemPlayer1.Location = new System.Drawing.Point(42, 49);
-            this.ImagemPlayer1.Name = "ImagemPlayer1";
-            this.ImagemPlayer1.Size = new System.Drawing.Size(235, 205);
-            this.ImagemPlayer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImagemPlayer1.TabIndex = 0;
-            this.ImagemPlayer1.TabStop = false;
-            // 
-            // ImagemPlayer2
-            // 
-            this.ImagemPlayer2.Location = new System.Drawing.Point(637, 49);
-            this.ImagemPlayer2.Name = "ImagemPlayer2";
-            this.ImagemPlayer2.Size = new System.Drawing.Size(235, 205);
-            this.ImagemPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImagemPlayer2.TabIndex = 1;
-            this.ImagemPlayer2.TabStop = false;
             // 
             // label1
             // 
@@ -311,6 +293,24 @@
             this.RoundsTextBox.Size = new System.Drawing.Size(106, 31);
             this.RoundsTextBox.TabIndex = 34;
             // 
+            // ImagemPlayer2
+            // 
+            this.ImagemPlayer2.Location = new System.Drawing.Point(637, 49);
+            this.ImagemPlayer2.Name = "ImagemPlayer2";
+            this.ImagemPlayer2.Size = new System.Drawing.Size(235, 205);
+            this.ImagemPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImagemPlayer2.TabIndex = 1;
+            this.ImagemPlayer2.TabStop = false;
+            // 
+            // ImagemPlayer1
+            // 
+            this.ImagemPlayer1.Location = new System.Drawing.Point(42, 49);
+            this.ImagemPlayer1.Name = "ImagemPlayer1";
+            this.ImagemPlayer1.Size = new System.Drawing.Size(235, 205);
+            this.ImagemPlayer1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImagemPlayer1.TabIndex = 0;
+            this.ImagemPlayer1.TabStop = false;
+            // 
             // Batalha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,8 +349,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Batalha";
             this.Load += new System.EventHandler(this.Batalha_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -60,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(672, 9);
+            this.label2.Location = new System.Drawing.Point(689, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 24);
             this.label2.TabIndex = 1;
@@ -86,7 +86,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(676, 63);
+            this.comboBox3.Location = new System.Drawing.Point(693, 63);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 4;
@@ -95,7 +95,7 @@
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(676, 226);
+            this.comboBox4.Location = new System.Drawing.Point(693, 226);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 5;
@@ -121,7 +121,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(574, 63);
+            this.label4.Location = new System.Drawing.Point(591, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 13);
             this.label4.TabIndex = 8;
@@ -130,7 +130,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(574, 229);
+            this.label5.Location = new System.Drawing.Point(591, 229);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 9;
@@ -160,7 +160,7 @@
             // ImagemPlayer2
             // 
             this.ImagemPlayer2.Image = global::Jogo_de_luta.Properties.Resources.dragao;
-            this.ImagemPlayer2.Location = new System.Drawing.Point(654, 97);
+            this.ImagemPlayer2.Location = new System.Drawing.Point(671, 97);
             this.ImagemPlayer2.Name = "ImagemPlayer2";
             this.ImagemPlayer2.Size = new System.Drawing.Size(166, 116);
             this.ImagemPlayer2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
