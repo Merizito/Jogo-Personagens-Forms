@@ -12,7 +12,9 @@ namespace Jogo_de_luta
 {
     public partial class Batalha : Form
     {
-        static int Rounds = 1;
+        public static int Rounds = 1;
+        static int vicP1 = 0;
+        static int vicP2 = 0;
         public Batalha()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace Jogo_de_luta
             string personagem2 = "";
 
             InitializeComponent();
-            RoundsTextBox.Text = "º"+Rounds+" ROUND";
+            RoundsTextBox.Text = +Rounds+" º"+" ROUND";
 
             player2Atk.Enabled = false;
             player2Def.Enabled = false;
@@ -72,7 +74,6 @@ namespace Jogo_de_luta
                 ImagemPlayer2.Image = Properties.Resources.general;
                 personagem2 = "general";
             }
-            button5.Enabled = false;
 
             textBox1.Text = personagem1;
             textBox2.Text = personagem2;
@@ -134,6 +135,7 @@ namespace Jogo_de_luta
             }
             catch (ArgumentOutOfRangeException)
             {
+                HP1.Value = 0;
                 if (ATK2.Value > HP1.Value)
                 {
                     textHP1.Text = "0";
@@ -144,7 +146,12 @@ namespace Jogo_de_luta
                     player2Atk.Enabled = false;
                     player2Def.Enabled = false;
                     button5.Enabled = true;
-                    ProximoRound(2);
+                    Program.Rounds++;
+                    Batalha.Rounds++;
+                    Program.vicP2++;
+                    Program.ultvit = 1;
+
+                    Close();
                 }  
             }
             finally
@@ -153,7 +160,7 @@ namespace Jogo_de_luta
                 player2Def.Enabled = false;
             }
         }
-        public void ProximoRound(int vencedor) {
+      /*  public void ProximoRound(int vencedor) {
             TrocaDeArma novaarma = new TrocaDeArma();
             if (Rounds == 1)
             {
@@ -179,7 +186,7 @@ namespace Jogo_de_luta
             }
 
 
-        }
+        }*/
         private void player1Atk_Click(object sender, EventArgs e)
         {
             try
@@ -202,7 +209,11 @@ namespace Jogo_de_luta
                     player2Atk.Enabled = false;
                     player2Def.Enabled = false;
                     button5.Enabled = true;
-                    ProximoRound(1);
+                    Program.Rounds++;
+                    Batalha.Rounds++;
+                    Program.vicP1++;
+                    Program.ultvit = 2;
+                    Close();
                 }
             }
             finally
@@ -221,7 +232,6 @@ namespace Jogo_de_luta
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
         }
         private void player1Def_Click(object sender, EventArgs e)
         {
@@ -231,10 +241,15 @@ namespace Jogo_de_luta
         {
 
         }
-        private void botaoRecomeçar_Click(object sender, EventArgs e)
+
+        private void RoundsTextBox_TextChanged(object sender, EventArgs e)
         {
-            Program.verifica = true;
-            Close();
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

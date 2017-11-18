@@ -13,7 +13,7 @@ namespace Jogo_de_luta
 {
     public partial class TrocaDeArma : Form
     {
-
+        string personagem;
         public TrocaDeArma()
         {
             InitializeComponent();
@@ -23,6 +23,7 @@ namespace Jogo_de_luta
             EscolhaPersonagem person = new EscolhaPersonagem();
             InitializeComponent();
             label1.Text = personagem;
+            this.personagem = personagem;
 
             FileStream arq2 = new FileStream("armas" + ".txt", FileMode.Open);
             StreamReader ler = new StreamReader(arq2);
@@ -46,7 +47,18 @@ namespace Jogo_de_luta
         private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.Text != null)
-                Close();
+            {
+                if (personagem == "1")
+                {
+                    Program.arma1 = comboBox1.Text;
+                    Close();
+                }
+                else {
+                    Program.arma2 = comboBox1.Text;
+                    Close();
+                }
+
+            }
             else
                 MessageBox.Show("ESCOLHA UMA NOVA ARMA!");
         }

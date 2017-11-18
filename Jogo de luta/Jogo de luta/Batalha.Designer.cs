@@ -52,11 +52,10 @@
             this.textHP2 = new System.Windows.Forms.TextBox();
             this.textATK2 = new System.Windows.Forms.TextBox();
             this.textDEF2 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.botaoRecomeçar = new System.Windows.Forms.Button();
             this.RoundsTextBox = new System.Windows.Forms.TextBox();
             this.ImagemPlayer2 = new System.Windows.Forms.PictureBox();
             this.ImagemPlayer1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).BeginInit();
             this.SuspendLayout();
@@ -263,35 +262,15 @@
             this.textDEF2.Size = new System.Drawing.Size(41, 20);
             this.textDEF2.TabIndex = 29;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(487, 529);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(90, 30);
-            this.button5.TabIndex = 32;
-            this.button5.Text = "SAIR";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // botaoRecomeçar
-            // 
-            this.botaoRecomeçar.Location = new System.Drawing.Point(306, 529);
-            this.botaoRecomeçar.Name = "botaoRecomeçar";
-            this.botaoRecomeçar.Size = new System.Drawing.Size(90, 30);
-            this.botaoRecomeçar.TabIndex = 33;
-            this.botaoRecomeçar.Text = "Recomeçar";
-            this.botaoRecomeçar.UseVisualStyleBackColor = true;
-            this.botaoRecomeçar.Click += new System.EventHandler(this.botaoRecomeçar_Click);
-            // 
             // RoundsTextBox
             // 
-            this.RoundsTextBox.Enabled = false;
             this.RoundsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoundsTextBox.Location = new System.Drawing.Point(399, 12);
             this.RoundsTextBox.Multiline = true;
             this.RoundsTextBox.Name = "RoundsTextBox";
             this.RoundsTextBox.Size = new System.Drawing.Size(106, 31);
             this.RoundsTextBox.TabIndex = 34;
+            this.RoundsTextBox.TextChanged += new System.EventHandler(this.RoundsTextBox_TextChanged);
             // 
             // ImagemPlayer2
             // 
@@ -311,14 +290,23 @@
             this.ImagemPlayer1.TabIndex = 0;
             this.ImagemPlayer1.TabStop = false;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(399, 530);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(90, 30);
+            this.button5.TabIndex = 35;
+            this.button5.Text = "Sair";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
             // Batalha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 631);
-            this.Controls.Add(this.RoundsTextBox);
-            this.Controls.Add(this.botaoRecomeçar);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.RoundsTextBox);
             this.Controls.Add(this.textHP2);
             this.Controls.Add(this.textATK2);
             this.Controls.Add(this.textDEF2);
@@ -384,8 +372,7 @@
         private System.Windows.Forms.TextBox textHP2;
         private System.Windows.Forms.TextBox textATK2;
         private System.Windows.Forms.TextBox textDEF2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button botaoRecomeçar;
         private System.Windows.Forms.TextBox RoundsTextBox;
+        private System.Windows.Forms.Button button5;
     }
 }
