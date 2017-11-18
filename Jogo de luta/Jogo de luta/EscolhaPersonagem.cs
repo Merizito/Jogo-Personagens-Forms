@@ -14,7 +14,6 @@ using System.IO;
 
 namespace Jogo_de_luta
 {
-    public delegate void adicionarpersonagem(string personxarma);
     public partial class EscolhaPersonagem : Form
     {
         static bool closer = false;
@@ -172,11 +171,13 @@ namespace Jogo_de_luta
 
         private void EscolhaPersonagem_FormClosing(object sender, FormClosingEventArgs e)
         {
+        }
+
+        private void EscolhaPersonagem_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
             if (closer == true)
-            {
                 Hide();
-                closer = false;
-            }
             else
                 Environment.Exit(0);
         }

@@ -336,6 +336,7 @@
             this.Name = "Batalha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Batalha";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Batalha_FormClosed);
             this.Load += new System.EventHandler(this.Batalha_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer1)).EndInit();

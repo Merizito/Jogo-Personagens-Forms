@@ -82,6 +82,7 @@
             this.Name = "TrocaDeArma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrocaDeArma";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TrocaDeArma_FormClosed);
             this.Load += new System.EventHandler(this.TrocaDeArma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

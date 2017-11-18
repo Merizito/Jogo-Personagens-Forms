@@ -62,5 +62,10 @@ namespace Jogo_de_luta
             else
                 MessageBox.Show("ESCOLHA UMA NOVA ARMA!");
         }
+
+        private void TrocaDeArma_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

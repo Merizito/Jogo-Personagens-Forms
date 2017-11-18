@@ -11,6 +11,7 @@ namespace Jogo_de_luta.armas
     {
         public Fuzil() {
             setNome("Fuzil");
+            setDano();
         }
         public void usarArma()
         {

@@ -127,6 +127,7 @@
             this.Name = "Regras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Regras_FormClosed);
             this.Load += new System.EventHandler(this.Regras_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

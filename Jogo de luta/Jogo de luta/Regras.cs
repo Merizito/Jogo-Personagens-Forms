@@ -13,6 +13,7 @@ namespace Jogo_de_luta
 {
     public partial class Regras : Form
     {
+        bool closer = false;
         public Regras()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace Jogo_de_luta
         private void button1_Click(object sender, EventArgs e)
         {
             Program.variaveisPersonagens(textBox2.Text, textBox3.Text);
+            closer = true;
             Close();
             
         }
@@ -51,6 +53,14 @@ namespace Jogo_de_luta
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Environment.Exit(0);
+        }
+
+        private void Regras_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (closer == true)
+                Hide();
+            else
             Environment.Exit(0);
         }
     }

@@ -9,9 +9,11 @@ namespace Jogo_de_luta.armas
 {
      class CuspirFogo : Armas, IArma_IF
     {
+        
         public CuspirFogo()
         {
             this.setNome("Cuspir Fogo");
+            setDano();
         }
         public void usarArma()
        {

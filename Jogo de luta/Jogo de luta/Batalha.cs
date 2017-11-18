@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using Jogo_de_luta.personagem;
+using Jogo_de_luta.armas;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +17,7 @@ namespace Jogo_de_luta
         public static int Rounds = 1;
         static int vicP1 = 0;
         static int vicP2 = 0;
+        
         public Batalha()
         {
             InitializeComponent();
@@ -29,50 +32,103 @@ namespace Jogo_de_luta
 
             player2Atk.Enabled = false;
             player2Def.Enabled = false;
-
+            Personagens player1;
             if (getNome == "0")                                         //Dragao
             {
                 ImagemPlayer1.Image = Properties.Resources.dragao;
                 personagem1 = "dragao";
+                player1 = new Dragao();
             }
             else if (getNome == "1")                                    //Soldado
             {
                 ImagemPlayer1.Image = Properties.Resources.soldado;
                 personagem1 = "soldado";
+                player1 = new Soldado();
 
             }
             else if (getNome == "2")                                    //Lutador de Sumo
             {
                 ImagemPlayer1.Image = Properties.Resources.lutadorsumo;
                 personagem1 = "lutadorsumo";
+                player1 =new LutadorSumo();
 
             }
             else if (getNome == "3")                                    //General
             {
                 ImagemPlayer1.Image = Properties.Resources.general;
                 personagem1 = "general";
+                player1 = new General();
 
             }
-
+            Personagens player2;
             if (getNome2 == "0")                                         //Dragao
             {
                 ImagemPlayer2.Image = Properties.Resources.dragao;
                 personagem2 = "Dragao";
+                player2 = new Dragao();
             }
             else if (getNome2 == "1")                                        //Soldado
             {
                 ImagemPlayer2.Image = Properties.Resources.soldado;
                 personagem2 = "soldado";
+                player2 = new Soldado();
             }
             else if (getNome2 == "2")                                    //Lutador de Sumo
             {
                 ImagemPlayer2.Image = Properties.Resources.lutadorsumo;
                 personagem2 = "lutadorsumo";
+                player2 = new LutadorSumo();
             }
             else if (getNome2 == "3")                                    //General
             {
                 ImagemPlayer2.Image = Properties.Resources.general;
                 personagem2 = "general";
+                player2 = new General();
+            }
+            Armas ARMA1;
+
+            if (arma1.ToUpper() == "FUZIL")                                         //fuzil
+            {
+                arma1 = "Fuzil";
+                ARMA1 = new Fuzil();
+            }
+            else if (arma1.ToUpper() == "DESARMADO")                                    //Desarmado
+            {
+                arma1 = "Desarmado";
+                ARMA1 = new Desarmado();
+
+            }
+            else if (arma1.ToUpper() == "REVOLVER")                                    //Revolver
+            {
+                arma1 = "Revolver";
+                ARMA1 = new Revolver();
+
+            }
+            else if (arma1.ToUpper() == "CUSPIRFOGO")                                    //Fogo
+            {
+                arma1 = "Desarmado";
+                ARMA1 = new Desarmado();
+
+            }
+            Armas ARMA2;
+            if (getNome2 == "0")                                         //Dragao
+            {
+                personagem2 = "Dragao";
+                player2 = new Dragao();
+            }
+            else if (getNome2 == "1")                                        //Soldado
+            {
+                personagem2 = "soldado";
+                player2 = new Soldado();
+            }
+            else if (getNome2 == "2")                                    //Lutador de Sumo
+            {
+                player2 = new LutadorSumo();
+            }
+            else if (getNome2 == "3")                                    //General
+            {
+                personagem2 = "general";
+                player2 = new General();
             }
 
             textBox1.Text = personagem1;
@@ -95,12 +151,12 @@ namespace Jogo_de_luta
         {
             Random rand = new Random();
 
-            ATK1.Maximum = rand.Next(25, 125);
+            ATK1.Maximum = 100;
             ATK1.Minimum = 0;
             textATK1.Text = ATK1.Maximum.ToString();
             ATK1.Increment(Convert.ToInt32(textATK1.Text));
 
-            DEF1.Maximum = rand.Next(25, 125);
+            DEF1.Maximum = 100;
             DEF1.Minimum = 0;
             textDEF1.Text = DEF1.Maximum.ToString();
             DEF1.Increment(Convert.ToInt32(textDEF1.Text));
@@ -108,17 +164,18 @@ namespace Jogo_de_luta
         void RamdomATKDEF2() {
             Random rand2 = new Random();
 
-            ATK2.Maximum = rand2.Next(25, 125);
+            ATK2.Maximum = 100;
             ATK2.Minimum = 0;
             textATK2.Text = ATK2.Maximum.ToString();
             ATK2.Increment(Convert.ToInt32(textATK2.Text));
 
-            DEF2.Maximum = rand2.Next(25, 125);
+            DEF2.Maximum = 100;
             DEF2.Minimum = 0;
             textDEF2.Text = DEF2.Maximum.ToString();
             DEF2.Increment(Convert.ToInt32(textDEF2.Text));
 
         }
+
         private void Batalha_Load(object sender, EventArgs e)
         {
 
@@ -249,6 +306,12 @@ namespace Jogo_de_luta
 
         private void button5_Click_1(object sender, EventArgs e)
         {
+            Environment.Exit(0);
+        }
+
+        private void Batalha_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
             Environment.Exit(0);
         }
     }

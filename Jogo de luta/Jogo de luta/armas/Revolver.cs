@@ -9,7 +9,10 @@ namespace Jogo_de_luta.armas
 {
     class Revolver : Armas, IArma_IF
     {
-        public Revolver() { setNome("Revolver"); }
+        public Revolver() {
+            setNome("Revolver");
+            setDano();
+        }
         public void usarArma()
         {
             Console.WriteLine("Tiro de revolver!!\nPah!");

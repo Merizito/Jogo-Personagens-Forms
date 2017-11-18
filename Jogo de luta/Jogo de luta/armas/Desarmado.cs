@@ -11,6 +11,7 @@ namespace Jogo_de_luta.armas
     {
         public Desarmado() {
             setNome("Desarmado");
+            setDano();
         }
         public void usarArma()
         {

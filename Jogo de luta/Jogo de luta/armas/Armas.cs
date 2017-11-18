@@ -9,7 +9,9 @@ namespace Jogo_de_luta.armas
 {
     class Armas
     {
+        Random RAND = new Random();
         private string Nome;
+        int dano;
         static public void SalvarArma(string nome1)
         {
             FileStream arq;
@@ -47,6 +49,12 @@ namespace Jogo_de_luta.armas
         }
         public string getNome() {
             return this.Nome;
+        }
+        public int getDano() {
+            return dano;
+        }
+        public void setDano() {
+            this.dano = RAND.Next(25,100);
         }
         public void setNome(string nome) {
             this.Nome = nome;
