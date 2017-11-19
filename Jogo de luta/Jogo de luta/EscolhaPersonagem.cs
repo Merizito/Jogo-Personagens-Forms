@@ -181,6 +181,11 @@ namespace Jogo_de_luta
             else
                 Environment.Exit(0);
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     

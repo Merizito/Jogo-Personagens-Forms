@@ -17,7 +17,10 @@ namespace Jogo_de_luta
         public static int Rounds = 1;
         static int vicP1 = 0;
         static int vicP2 = 0;
-        
+        Armas ARMA1;
+        Armas ARMA2;
+
+
         public Batalha()
         {
             InitializeComponent();
@@ -26,7 +29,6 @@ namespace Jogo_de_luta
         {
             string personagem1 = "";
             string personagem2 = "";
-
             InitializeComponent();
             RoundsTextBox.Text = +Rounds+" º"+" ROUND";
 
@@ -85,50 +87,46 @@ namespace Jogo_de_luta
                 personagem2 = "general";
                 player2 = new General();
             }
-            Armas ARMA1;
 
-            if (arma1.ToUpper() == "FUZIL")                                         //fuzil
+            if (arma1.ToUpper() == "FUZIL\r")                                         //fuzil
             {
-                arma1 = "Fuzil";
                 ARMA1 = new Fuzil();
             }
-            else if (arma1.ToUpper() == "DESARMADO")                                    //Desarmado
+            else if (arma1.ToUpper() == "DESARMADO\r")                                    //Desarmado
             {
-                arma1 = "Desarmado";
                 ARMA1 = new Desarmado();
 
             }
-            else if (arma1.ToUpper() == "REVOLVER")                                    //Revolver
+            else if (arma1.ToUpper() == "REVOLVER\r")                                    //Revolver
             {
-                arma1 = "Revolver";
                 ARMA1 = new Revolver();
 
             }
-            else if (arma1.ToUpper() == "CUSPIRFOGO")                                    //Fogo
+            else if (arma1.ToUpper() == "CUSPIR FOGO\r")                                    //Fogo
             {
-                arma1 = "Desarmado";
-                ARMA1 = new Desarmado();
+                ARMA1 = new CuspirFogo();
 
             }
-            Armas ARMA2;
-            if (getNome2 == "0")                                         //Dragao
+
+
+            if (arma2.ToUpper() == "FUZIL")                                         //fuzil
             {
-                personagem2 = "Dragao";
-                player2 = new Dragao();
+                ARMA2 = new Fuzil();
             }
-            else if (getNome2 == "1")                                        //Soldado
+            else if (arma2.ToUpper() == "DESARMADO\r")                                    //Desarmado
             {
-                personagem2 = "soldado";
-                player2 = new Soldado();
+                ARMA2 = new Desarmado();
+
             }
-            else if (getNome2 == "2")                                    //Lutador de Sumo
+            else if (arma2.ToUpper() == "REVOLVER\r")                                    //Revolver
             {
-                player2 = new LutadorSumo();
+                ARMA2 = new Revolver();
+
             }
-            else if (getNome2 == "3")                                    //General
+            else if (arma2.ToUpper() == "CUSPIR FOGO\r")                                    //Fogo
             {
-                personagem2 = "general";
-                player2 = new General();
+                ARMA2 = new CuspirFogo();
+
             }
 
             textBox1.Text = personagem1;
@@ -151,12 +149,12 @@ namespace Jogo_de_luta
         {
             Random rand = new Random();
 
-            ATK1.Maximum = 100;
+            ATK1.Maximum = 100+ ARMA1.getDano();
             ATK1.Minimum = 0;
             textATK1.Text = ATK1.Maximum.ToString();
             ATK1.Increment(Convert.ToInt32(textATK1.Text));
 
-            DEF1.Maximum = 100;
+            DEF1.Maximum = 100 + ARMA2.getDano();
             DEF1.Minimum = 0;
             textDEF1.Text = DEF1.Maximum.ToString();
             DEF1.Increment(Convert.ToInt32(textDEF1.Text));
@@ -164,7 +162,7 @@ namespace Jogo_de_luta
         void RamdomATKDEF2() {
             Random rand2 = new Random();
 
-            ATK2.Maximum = 100;
+            ATK2.Maximum = 100+ARMA2.getDano();
             ATK2.Minimum = 0;
             textATK2.Text = ATK2.Maximum.ToString();
             ATK2.Increment(Convert.ToInt32(textATK2.Text));
