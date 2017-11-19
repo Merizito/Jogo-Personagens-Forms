@@ -17,6 +17,7 @@ namespace Jogo_de_luta
         public static int Rounds = 1;
         static int vicP1 = 0;
         static int vicP2 = 0;
+        static bool closer = false;
         Armas ARMA1;
         Armas ARMA2;
 
@@ -109,7 +110,7 @@ namespace Jogo_de_luta
             }
 
 
-            if (arma2.ToUpper() == "FUZIL")                                         //fuzil
+            if (arma2.ToUpper() == "FUZIL\r")                                         //fuzil
             {
                 ARMA2 = new Fuzil();
             }
@@ -148,11 +149,11 @@ namespace Jogo_de_luta
         void RandomATKDEF()
         {
             Random rand = new Random();
-
-            ATK1.Maximum = 100+ ARMA1.getDano();
+            //ARMA1.setDano();
+            ATK1.Maximum = 100+ Convert.ToInt32(ARMA1.getDano());
             ATK1.Minimum = 0;
             textATK1.Text = ATK1.Maximum.ToString();
-            ATK1.Increment(Convert.ToInt32(textATK1.Text));
+            ATK1.Increment(Convert.ToInt32(textATK1.Text) + Convert.ToInt32(ARMA1.getDano()));
 
             DEF1.Maximum = 100 + ARMA2.getDano();
             DEF1.Minimum = 0;
@@ -161,11 +162,11 @@ namespace Jogo_de_luta
         }
         void RamdomATKDEF2() {
             Random rand2 = new Random();
-
-            ATK2.Maximum = 100+ARMA2.getDano();
+            ARMA2.setDano();
+            ATK2.Maximum = 100+Convert.ToInt32(ARMA2.getDano());
             ATK2.Minimum = 0;
             textATK2.Text = ATK2.Maximum.ToString();
-            ATK2.Increment(Convert.ToInt32(textATK2.Text));
+            ATK2.Increment(Convert.ToInt32(textATK2.Text)+Convert.ToInt32(ARMA2.getDano()));
 
             DEF2.Maximum = 100;
             DEF2.Minimum = 0;
@@ -176,7 +177,7 @@ namespace Jogo_de_luta
 
         private void Batalha_Load(object sender, EventArgs e)
         {
-
+             
         }
         private void player2Atk_Click(object sender, EventArgs e)
         {
@@ -191,11 +192,11 @@ namespace Jogo_de_luta
             catch (ArgumentOutOfRangeException)
             {
                 HP1.Value = 0;
-                if (ATK2.Value > HP1.Value)
+                if (ATK2.Value >= HP1.Value)
                 {
                     textHP1.Text = "0";
                     HP1.Value = 0;
-                    MessageBox.Show("Player 2 ganhou!");
+                    MessageBox.Show("Player 2 ganhou o round!");
                     player1Atk.Enabled = false;
                     player1Def.Enabled = false;
                     player2Atk.Enabled = false;
@@ -205,7 +206,7 @@ namespace Jogo_de_luta
                     Batalha.Rounds++;
                     Program.vicP2++;
                     Program.ultvit = 1;
-
+                    closer = true;
                     Close();
                 }  
             }
@@ -254,11 +255,11 @@ namespace Jogo_de_luta
             }
             catch (ArgumentOutOfRangeException)
             {
-                if (ATK1.Value > HP2.Value)
+                if (ATK1.Value >= HP2.Value)
                 {
                     textHP2.Text = "0";
                     HP2.Value = 0;
-                    MessageBox.Show("Player 1 ganhou!");
+                    MessageBox.Show("Player 1 ganhou o round!");
                     player1Atk.Enabled = false;
                     player1Def.Enabled = false;
                     player2Atk.Enabled = false;
@@ -268,6 +269,7 @@ namespace Jogo_de_luta
                     Batalha.Rounds++;
                     Program.vicP1++;
                     Program.ultvit = 2;
+                    closer = true;
                     Close();
                 }
             }
@@ -309,8 +311,13 @@ namespace Jogo_de_luta
 
         private void Batalha_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-            Environment.Exit(0);
+            if (closer == true)
+            {
+                Hide();
+                closer = false;
+            }
+            else
+                Environment.Exit(0);
         }
     }
 }

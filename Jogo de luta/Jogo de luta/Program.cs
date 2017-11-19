@@ -40,7 +40,23 @@ namespace Jogo_de_luta
             Revolver revolver = new Revolver();
             ///Escolher Personagens
             Application.SetCompatibleTextRenderingDefault(false);
-            StartGame();
+            Application.Run(new Regras());
+            Application.Run(new EscolhaPersonagem(player1, player2));
+            Application.Run(new Batalha(personagem1, arma1, personagem2, arma2, verifica));
+            Application.Run(new TrocaDeArma("1"));
+            Application.Run(new TrocaDeArma("2"));
+            Application.Run(new Batalha(personagem1, arma1, personagem2, arma2, verifica));
+            if (vicP2 != 2 && vicP1 != 2)
+            {
+                Application.Run(new TrocaDeArma(Convert.ToString(ultvit)));
+                Application.Run(new Batalha(personagem1, arma1, personagem2, arma2, verifica));
+            }
+            if (vicP1 > vicP2)
+            {
+                MessageBox.Show("PLAYER 1 GANHOU!!", "VITORIA");
+            }
+            else
+                MessageBox.Show("PLAYER 2 GANHOU!!", "VITORIA");
             verifica = true;
             do
             {

@@ -264,12 +264,14 @@
             // 
             // RoundsTextBox
             // 
+            this.RoundsTextBox.Enabled = false;
             this.RoundsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoundsTextBox.Location = new System.Drawing.Point(399, 12);
             this.RoundsTextBox.Multiline = true;
             this.RoundsTextBox.Name = "RoundsTextBox";
             this.RoundsTextBox.Size = new System.Drawing.Size(106, 31);
             this.RoundsTextBox.TabIndex = 34;
+            this.RoundsTextBox.Text = "or";
             this.RoundsTextBox.TextChanged += new System.EventHandler(this.RoundsTextBox_TextChanged);
             // 
             // ImagemPlayer2
@@ -335,7 +337,7 @@
             this.Controls.Add(this.ImagemPlayer1);
             this.Name = "Batalha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Batalha";
+            this.Text = "te";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Batalha_FormClosed);
             this.Load += new System.EventHandler(this.Batalha_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImagemPlayer2)).EndInit();

@@ -21,6 +21,7 @@ namespace Jogo_de_luta
         public TrocaDeArma(string personagem)
         {
             EscolhaPersonagem person = new EscolhaPersonagem();
+             
             InitializeComponent();
             label1.Text = personagem;
             this.personagem = personagem;
@@ -29,7 +30,6 @@ namespace Jogo_de_luta
             StreamReader ler = new StreamReader(arq2);
 
             string[] conteudo = ler.ReadToEnd().Split('\n');
-            ler.Close();
             int qntLinhas = File.ReadAllLines("armas"+ ".txt").Length;
 
             for (int i = 0; i < qntLinhas; i++)
@@ -46,6 +46,8 @@ namespace Jogo_de_luta
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
+            closer = true;
             if (comboBox1.Text != null)
             {
                 if (personagem == "1")
@@ -57,14 +59,25 @@ namespace Jogo_de_luta
                     Program.arma2 = comboBox1.Text;
                     Close();
                 }
-
             }
             else
                 MessageBox.Show("ESCOLHA UMA NOVA ARMA!");
         }
 
+
+
+
+
+
+
+
+        static bool closer = false;
         private void TrocaDeArma_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (closer == true) {
+                Hide();
+                closer = false;
+            }else
             Environment.Exit(0);
         }
     }

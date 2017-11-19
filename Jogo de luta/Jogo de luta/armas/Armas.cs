@@ -47,14 +47,17 @@ namespace Jogo_de_luta.armas
             }
 
         }
+        
         public string getNome() {
+            
             return this.Nome;
         }
         public int getDano() {
             return dano;
         }
-        public void setDano() {
-            this.dano = RAND.Next(25,100);
+        public virtual void setDano()
+        {         
+                this.dano = RAND.Next(25, 100);
         }
         public void setNome(string nome) {
             this.Nome = nome;
